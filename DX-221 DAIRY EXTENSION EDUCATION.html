@@ -1,0 +1,1334 @@
+
+<!-- saved from url=(0040)http://localhost:8101/quiz.php?page=quiz -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+      <title>ICAR Offline Ecourse</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body
+    {
+      padding:0 0 0 0;
+      margin:0 0 0 0;
+      font-size:20px;
+    }
+
+    
+    #quiz
+    {
+      margin: 2% 5% 2% 5%;
+      padding:2% 5% 2% 5%;
+    }
+    
+    [type=radio]
+    {
+      margin: 8px 0px 8px 0px;
+    }
+    
+    #quiz label
+    {
+      width:80%;
+    }
+    
+    #result
+    {
+      background-color:lightblue;
+      position:fixed;
+      float: left;
+      color:black;
+      font-size:20px;
+      text-align:center;
+    }
+
+    </style>
+
+    <script>
+     var correctAns = 0;
+     var incorrectAns = 0;
+     var totalAns =0;
+     function quiz() 
+     {
+       let radioBtns = document.querySelectorAll(".radioBtn");
+       for (let btn of radioBtns) 
+       {
+         btn.addEventListener('change', function(targetBtn) 
+         {
+           btn = targetBtn.target;
+           let id = "#label" + btn.id;
+           let label = document.querySelector(id);           
+           if (btn.value=="correct") 
+           {
+             if (label.style.borderStyle!="solid") 
+             {
+              correctAns += 1; 
+              totalAns+=1;
+             }
+             label.style.borderColor="green";
+             label.style.borderStyle="solid";
+           } 
+           else
+           {
+             if (label.style.borderStyle!="dotted") 
+             {
+               incorrectAns += 1; 
+               totalAns+=1;
+             }
+             label.style.borderColor="red";
+             label.style.borderStyle="dotted";
+           }
+           percentRight =  correctAns*100/totalAns;
+           document.getElementById("result").innerHTML = "Right/Total<br>" + String(correctAns) + "/" + String(totalAns) +"<br>" +
+                                                           String(percentRight.toFixed(1)) + "%";
+         });
+       }
+     }
+    </script>
+    </head>
+    <body onload="quiz()">
+  <div id="result">
+  </div><div id="quiz"><h4>DX-1 DAIRY EXTENSION EDUCATION</h4><br><div class="question">1. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">The teaching of Extension Education at undergraduate level was started first time in India at:</font></span></font><br><input type="radio" id="ans2599" name="655" class="radioBtn" value="wrong"><label for="ans2599" id="labelans2599" class="wrong">  Bihar</label><br><input type="radio" id="ans2600" name="655" class="radioBtn" value="wrong"><label for="ans2600" id="labelans2600" class="wrong">  Nagpur</label><br><input type="radio" id="ans2601" name="655" class="radioBtn" value="correct"><label for="ans2601" id="labelans2601" class="correct">  Calcutta</label><br><input type="radio" id="ans2602" name="655" class="radioBtn" value="wrong"><label for="ans2602" id="labelans2602" class="wrong">  New Delhi</label><br></div><br><div class="question">2. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">The first post-graduate teaching in the discipline of Extension Education was launched in Bihar Agricultural College, Sabour in the year</font></span></font><br><input type="radio" id="ans2603" name="656" class="radioBtn" value="correct"><label for="ans2603" id="labelans2603" class="correct">  1955</label><br><input type="radio" id="ans2604" name="656" class="radioBtn" value="wrong"><label for="ans2604" id="labelans2604" class="wrong">  1950</label><br><input type="radio" id="ans2605" name="656" class="radioBtn" value="wrong"><label for="ans2605" id="labelans2605" class="wrong">  1958</label><br><input type="radio" id="ans2606" name="656" class="radioBtn" value="wrong"><label for="ans2606" id="labelans2606" class="wrong">  1961</label><br></div><br><div class="question">3. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">Extension Education brings about desirable changes in the behaviour of the concerned persons through educational methods. The changes will occur in</font></span></font><br><input type="radio" id="ans2607" name="657" class="radioBtn" value="wrong"><label for="ans2607" id="labelans2607" class="wrong">  Attitude</label><br><input type="radio" id="ans2608" name="657" class="radioBtn" value="wrong"><label for="ans2608" id="labelans2608" class="wrong">  Knowledge</label><br><input type="radio" id="ans2609" name="657" class="radioBtn" value="wrong"><label for="ans2609" id="labelans2609" class="wrong">  Skill</label><br><input type="radio" id="ans2610" name="657" class="radioBtn" value="correct"><label for="ans2610" id="labelans2610" class="correct">  All the above</label><br></div><br><div class="question">4. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">In Dairy Extension Education process, the ultimate authority will remain with</font></span></font><br><input type="radio" id="ans2611" name="658" class="radioBtn" value="wrong"><label for="ans2611" id="labelans2611" class="wrong">  Dairy Extension professional</label><br><input type="radio" id="ans2612" name="658" class="radioBtn" value="wrong"><label for="ans2612" id="labelans2612" class="wrong">  Dairy Extension Worker</label><br><input type="radio" id="ans2613" name="658" class="radioBtn" value="wrong"><label for="ans2613" id="labelans2613" class="wrong">  Village Sarpanch</label><br><input type="radio" id="ans2614" name="658" class="radioBtn" value="correct"><label for="ans2614" id="labelans2614" class="correct">  Dairy farmers</label><br></div><br><div class="question">5. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">Who is known as father of University Extension</font></span></font><br><input type="radio" id="ans2615" name="659" class="radioBtn" value="correct"><label for="ans2615" id="labelans2615" class="correct">  James Stuart</label><br><input type="radio" id="ans2616" name="659" class="radioBtn" value="wrong"><label for="ans2616" id="labelans2616" class="wrong">  J.P. Leagans</label><br><input type="radio" id="ans2617" name="659" class="radioBtn" value="wrong"><label for="ans2617" id="labelans2617" class="wrong">  K.N. Singh</label><br><input type="radio" id="ans2618" name="659" class="radioBtn" value="wrong"><label for="ans2618" id="labelans2618" class="wrong">  N. Rolling</label><br></div><br><div class="question">6. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><!--[endif]--><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The Fundamental objective of extension education is overall development of:</span></font><br><input type="radio" id="ans2619" name="660" class="radioBtn" value="correct"><label for="ans2619" id="labelans2619" class="correct">  The Rural people</label><br><input type="radio" id="ans2620" name="660" class="radioBtn" value="wrong"><label for="ans2620" id="labelans2620" class="wrong">  Rural Institution</label><br><input type="radio" id="ans2621" name="660" class="radioBtn" value="wrong"><label for="ans2621" id="labelans2621" class="wrong">  Extension personnel</label><br><input type="radio" id="ans2622" name="660" class="radioBtn" value="wrong"><label for="ans2622" id="labelans2622" class="wrong">  All the above</label><br></div><br><div class="question">7. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The crucial function of extension education for the dairy farmers is to</span></font><br><input type="radio" id="ans2623" name="661" class="radioBtn" value="wrong"><label for="ans2623" id="labelans2623" class="wrong">  Bring change in behaviour</label><br><input type="radio" id="ans2624" name="661" class="radioBtn" value="wrong"><label for="ans2624" id="labelans2624" class="wrong">  Motivate</label><br><input type="radio" id="ans2625" name="661" class="radioBtn" value="wrong"><label for="ans2625" id="labelans2625" class="wrong">  Educate</label><br><input type="radio" id="ans2626" name="661" class="radioBtn" value="correct"><label for="ans2626" id="labelans2626" class="correct">  Bring desirable change in behaviour</label><br></div><br><div class="question">8. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Sound extension philosophy is always…………… looking:</span></font><br><input type="radio" id="ans2627" name="662" class="radioBtn" value="wrong"><label for="ans2627" id="labelans2627" class="wrong">  In depth</label><br><input type="radio" id="ans2628" name="662" class="radioBtn" value="correct"><label for="ans2628" id="labelans2628" class="correct">  Forward</label><br><input type="radio" id="ans2629" name="662" class="radioBtn" value="wrong"><label for="ans2629" id="labelans2629" class="wrong">  Positive</label><br><input type="radio" id="ans2630" name="662" class="radioBtn" value="wrong"><label for="ans2630" id="labelans2630" class="wrong">  Step by step</label><br></div><br><div class="question">9. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The individual is--------------------- in the <span>democracy</span></span></font><br><input type="radio" id="ans2631" name="663" class="radioBtn" value="wrong"><label for="ans2631" id="labelans2631" class="wrong">  Complex</label><br><input type="radio" id="ans2632" name="663" class="radioBtn" value="wrong"><label for="ans2632" id="labelans2632" class="wrong">  Common</label><br><input type="radio" id="ans2633" name="663" class="radioBtn" value="correct"><label for="ans2633" id="labelans2633" class="correct">  Supreme</label><br><input type="radio" id="ans2634" name="663" class="radioBtn" value="wrong"><label for="ans2634" id="labelans2634" class="wrong">  Basic</label><br></div><br><div class="question">10. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""> </span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">‘Principle is a statement of policy to guide decisions and actions in a proper manner’ is a definition given by</span></font><br><input type="radio" id="ans2635" name="664" class="radioBtn" value="wrong"><label for="ans2635" id="labelans2635" class="wrong">  Leagans</label><br><input type="radio" id="ans2636" name="664" class="radioBtn" value="correct"><label for="ans2636" id="labelans2636" class="correct">  Mathews</label><br><input type="radio" id="ans2637" name="664" class="radioBtn" value="wrong"><label for="ans2637" id="labelans2637" class="wrong">  Berlo</label><br><input type="radio" id="ans2638" name="664" class="radioBtn" value="wrong"><label for="ans2638" id="labelans2638" class="wrong">  K.N. Singh</label><br></div><br><div class="question">11. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The needs and interests related to dairy farming differ from</span></font><br><input type="radio" id="ans2639" name="665" class="radioBtn" value="wrong"><label for="ans2639" id="labelans2639" class="wrong">  Individual to individual</label><br><input type="radio" id="ans2640" name="665" class="radioBtn" value="wrong"><label for="ans2640" id="labelans2640" class="wrong">  Place to place</label><br><input type="radio" id="ans2641" name="665" class="radioBtn" value="wrong"><label for="ans2641" id="labelans2641" class="wrong">  Programme to programme</label><br><input type="radio" id="ans2642" name="665" class="radioBtn" value="correct"><label for="ans2642" id="labelans2642" class="correct">  All the above</label><br></div><br><div class="question">12. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""> </span></span></span><!--[endif]--><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">A satisfied stakeholder is the best</span></font><br><input type="radio" id="ans2643" name="666" class="radioBtn" value="correct"><label for="ans2643" id="labelans2643" class="correct">  Advertisement</label><br><input type="radio" id="ans2644" name="666" class="radioBtn" value="wrong"><label for="ans2644" id="labelans2644" class="wrong">  Motivation</label><br><input type="radio" id="ans2645" name="666" class="radioBtn" value="wrong"><label for="ans2645" id="labelans2645" class="wrong">  Teacher</label><br><input type="radio" id="ans2646" name="666" class="radioBtn" value="wrong"><label for="ans2646" id="labelans2646" class="wrong">  Leaner</label><br></div><br><div class="question">13. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The main principle of dairy extension education is</span></font><br><input type="radio" id="ans2647" name="667" class="radioBtn" value="wrong"><label for="ans2647" id="labelans2647" class="wrong">  Use of trained specialist</label><br><input type="radio" id="ans2648" name="667" class="radioBtn" value="wrong"><label for="ans2648" id="labelans2648" class="wrong">  Involvement of whole family</label><br><input type="radio" id="ans2649" name="667" class="radioBtn" value="correct"><label for="ans2649" id="labelans2649" class="correct">  Learning by Doing</label><br><input type="radio" id="ans2650" name="667" class="radioBtn" value="wrong"><label for="ans2650" id="labelans2650" class="wrong">  Cooperation and Participation</label><br></div><br><div class="question">14. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">A fundamental truth and a settled rule of action</span></font><br><input type="radio" id="ans2651" name="668" class="radioBtn" value="correct"><label for="ans2651" id="labelans2651" class="correct">  Principle</label><br><input type="radio" id="ans2652" name="668" class="radioBtn" value="wrong"><label for="ans2652" id="labelans2652" class="wrong">  Philosophy</label><br><input type="radio" id="ans2653" name="668" class="radioBtn" value="wrong"><label for="ans2653" id="labelans2653" class="wrong">  Objectives</label><br><input type="radio" id="ans2654" name="668" class="radioBtn" value="wrong"><label for="ans2654" id="labelans2654" class="wrong">  Function</label><br></div><br><div class="question">15. <span lang="EN-IN"><span><span></span></span></span><font size="4"><span lang="EN-IN" style="font-family: times new roman,times,serif;">Gurgaon project was started in the year 1920 by</span></font><br><input type="radio" id="ans2655" name="669" class="radioBtn" value="wrong"><label for="ans2655" id="labelans2655" class="wrong">  Sri Rabindra Nath Tagore</label><br><input type="radio" id="ans2656" name="669" class="radioBtn" value="correct"><label for="ans2656" id="labelans2656" class="correct">  Mr. F. L. Brayne</label><br><input type="radio" id="ans2657" name="669" class="radioBtn" value="wrong"><label for="ans2657" id="labelans2657" class="wrong">  Sri S. K. Dey</label><br><input type="radio" id="ans2658" name="669" class="radioBtn" value="wrong"><label for="ans2658" id="labelans2658" class="wrong">  Sir Daniel Hamilton</label><br></div><br><div class="question">16. <span lang="EN-IN"><span><span> </span></span></span><font size="4"><span lang="EN-IN" style="font-family: times new roman,times,serif;">‘Indian Village Service (IVS-1945)’ was started under the guidance of:</span></font><br><input type="radio" id="ans2659" name="670" class="radioBtn" value="wrong"><label for="ans2659" id="labelans2659" class="wrong">  Sir Daniel Hamilton’s</label><br><input type="radio" id="ans2660" name="670" class="radioBtn" value="correct"><label for="ans2660" id="labelans2660" class="correct">  Dr. W. H. Wisher</label><br><input type="radio" id="ans2661" name="670" class="radioBtn" value="wrong"><label for="ans2661" id="labelans2661" class="wrong">  Sri S. K. Dey</label><br><input type="radio" id="ans2662" name="670" class="radioBtn" value="wrong"><label for="ans2662" id="labelans2662" class="wrong">  Mahatma Gandhi</label><br></div><br><div class="question">17. <span lang="EN-IN"><span style="font-family: times new roman,times,serif;">I</span><font size="4"><span style="font-family: times new roman,times,serif;">n which year ‘Grow More Food Campaign’ was started in India:</span></font></span><br><input type="radio" id="ans2663" name="671" class="radioBtn" value="wrong"><label for="ans2663" id="labelans2663" class="wrong">  1920</label><br><input type="radio" id="ans2664" name="671" class="radioBtn" value="wrong"><label for="ans2664" id="labelans2664" class="wrong">  1940</label><br><input type="radio" id="ans2665" name="671" class="radioBtn" value="wrong"><label for="ans2665" id="labelans2665" class="wrong">  1922</label><br><input type="radio" id="ans2666" name="671" class="radioBtn" value="correct"><label for="ans2666" id="labelans2666" class="correct">  1942</label><br></div><br><div class="question">18. <font size="4"><span lang="EN-IN" style="font-family: times new roman,times,serif;">Sri Rabindra Nath Tagore started a rural development project named as</span></font><br><input type="radio" id="ans2667" name="672" class="radioBtn" value="wrong"><label for="ans2667" id="labelans2667" class="wrong">  Etawah pilot Project</label><br><input type="radio" id="ans2668" name="672" class="radioBtn" value="correct"><label for="ans2668" id="labelans2668" class="correct">  Sriniketan Experiment</label><br><input type="radio" id="ans2669" name="672" class="radioBtn" value="wrong"><label for="ans2669" id="labelans2669" class="wrong">  Nilokheri Project</label><br><input type="radio" id="ans2670" name="672" class="radioBtn" value="wrong"><label for="ans2670" id="labelans2670" class="wrong">  Firka Vikas Yojana</label><br></div><br><div class="question">19. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">‘Grow More Food Enquiry Committee’ was appointed by Government of India in the year:</span></font><br><input type="radio" id="ans2671" name="673" class="radioBtn" value="correct"><label for="ans2671" id="labelans2671" class="correct">  1952</label><br><input type="radio" id="ans2672" name="673" class="radioBtn" value="wrong"><label for="ans2672" id="labelans2672" class="wrong">  1947</label><br><input type="radio" id="ans2673" name="673" class="radioBtn" value="wrong"><label for="ans2673" id="labelans2673" class="wrong">  1950</label><br><input type="radio" id="ans2674" name="673" class="radioBtn" value="wrong"><label for="ans2674" id="labelans2674" class="wrong">  1945</label><br></div><br><div class="question">20. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">‘National Extension Service’ was inaugurated on:</span></font><br><input type="radio" id="ans2675" name="674" class="radioBtn" value="wrong"><label for="ans2675" id="labelans2675" class="wrong">  2nd  October 1952</label><br><input type="radio" id="ans2676" name="674" class="radioBtn" value="correct"><label for="ans2676" id="labelans2676" class="correct">  2nd October 1953</label><br><input type="radio" id="ans2677" name="674" class="radioBtn" value="wrong"><label for="ans2677" id="labelans2677" class="wrong">  2nd October 1950</label><br><input type="radio" id="ans2678" name="674" class="radioBtn" value="wrong"><label for="ans2678" id="labelans2678" class="wrong">  2nd  October 1954</label><br></div><br><div class="question">21. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">‘Intensive Cattle Development Project’ was launched in the year</span></font><br><input type="radio" id="ans2679" name="675" class="radioBtn" value="wrong"><label for="ans2679" id="labelans2679" class="wrong">  1951-52</label><br><input type="radio" id="ans2680" name="675" class="radioBtn" value="wrong"><label for="ans2680" id="labelans2680" class="wrong">  1960-61</label><br><input type="radio" id="ans2681" name="675" class="radioBtn" value="correct"><label for="ans2681" id="labelans2681" class="correct">  1963-64</label><br><input type="radio" id="ans2682" name="675" class="radioBtn" value="wrong"><label for="ans2682" id="labelans2682" class="wrong">  1965-66</label><br></div><br><div class="question">22. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">‘T&amp;V (Training &amp; Visit) programme’ was launched in the year</span></font><br><input type="radio" id="ans2683" name="676" class="radioBtn" value="wrong"><label for="ans2683" id="labelans2683" class="wrong">  1952</label><br><input type="radio" id="ans2684" name="676" class="radioBtn" value="correct"><label for="ans2684" id="labelans2684" class="correct">  1974</label><br><input type="radio" id="ans2685" name="676" class="radioBtn" value="wrong"><label for="ans2685" id="labelans2685" class="wrong">  1979</label><br><input type="radio" id="ans2686" name="676" class="radioBtn" value="wrong"><label for="ans2686" id="labelans2686" class="wrong">  1960</label><br></div><br><div class="question">23. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""> </span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">‘Operational flood’ programme was introduced by</span></font><br><input type="radio" id="ans2687" name="677" class="radioBtn" value="wrong"><label for="ans2687" id="labelans2687" class="wrong">  Government of India</label><br><input type="radio" id="ans2688" name="677" class="radioBtn" value="wrong"><label for="ans2688" id="labelans2688" class="wrong">  Dairy &amp;  Animal Husbandry Department</label><br><input type="radio" id="ans2689" name="677" class="radioBtn" value="correct"><label for="ans2689" id="labelans2689" class="correct">  NDDB</label><br><input type="radio" id="ans2690" name="677" class="radioBtn" value="wrong"><label for="ans2690" id="labelans2690" class="wrong">  NDRI</label><br></div><br><div class="question">24. <link rel="File-List" href="file:///C:/Users/pc2/AppData/Local/Temp/msohtmlclip1/01/clip_filelist.xml"><link rel="themeData" href="file:///C:/Users/pc2/AppData/Local/Temp/msohtmlclip1/01/clip_themedata.thmx"><link rel="colorSchemeMapping" href="file:///C:/Users/pc2/AppData/Local/Temp/msohtmlclip1/01/clip_colorschememapping.xml"><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><style> &lt;!-- /* Font Definitions */ @font-face {font-family:&quot;Cambria Math&quot;; panose-1:2 4 5 3 5 4 6 3 2 4; mso-font-charset:0; mso-generic-font-family:roman; mso-font-pitch:variable; mso-font-signature:-536870145 1107305727 0 0 415 0;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4; mso-font-charset:0; mso-generic-font-family:swiss; mso-font-pitch:variable; mso-font-signature:-520092929 1073786111 9 0 415 0;} /* Style Definitions */ p.MsoNormal, li.MsoNormal, div.MsoNormal {mso-style-unhide:no; mso-style-qformat:yes; mso-style-parent:&quot;&quot;; margin:0in; margin-bottom:.0001pt; text-align:justify; mso-pagination:widow-orphan; font-size:11.0pt; font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; mso-fareast-font-family:Calibri; mso-bidi-font-family:&quot;Times New Roman&quot;;} .MsoChpDefault {mso-style-type:export-only; mso-default-props:yes; font-size:10.0pt; mso-ansi-font-size:10.0pt; mso-bidi-font-size:10.0pt; mso-ascii-font-family:Calibri; mso-fareast-font-family:Calibri; mso-hansi-font-family:Calibri;} @page WordSection1 {size:8.5in 11.0in; margin:1.0in 1.0in 1.0in 1.0in; mso-header-margin:.5in; mso-footer-margin:.5in; mso-paper-source:0;} div.WordSection1 {page:WordSection1;} --</style><font size="5"><span style="font-size: 11pt; font-family: times new roman,times,serif;"><font size="4">Which is not a transfer of technology projects launched by the ICAR</font></span></font><br><input type="radio" id="ans2691" name="678" class="radioBtn" value="wrong"><label for="ans2691" id="labelans2691" class="wrong">  KVK</label><br><input type="radio" id="ans2692" name="678" class="radioBtn" value="wrong"><label for="ans2692" id="labelans2692" class="wrong">  ORP</label><br><input type="radio" id="ans2693" name="678" class="radioBtn" value="wrong"><label for="ans2693" id="labelans2693" class="wrong">  Lab to Land</label><br><input type="radio" id="ans2694" name="678" class="radioBtn" value="correct"><label for="ans2694" id="labelans2694" class="correct">  TTC</label><br></div><br><div class="question">25. <font size="4"><span style="font-family: times new roman,times,serif;">The <span>all first-line transfer of technology projects of the ICAR </span>have been integrated into KVKs in the year</span></font><br><input type="radio" id="ans2695" name="679" class="radioBtn" value="correct"><label for="ans2695" id="labelans2695" class="correct">  1992</label><br><input type="radio" id="ans2696" name="679" class="radioBtn" value="wrong"><label for="ans2696" id="labelans2696" class="wrong">  1990</label><br><input type="radio" id="ans2697" name="679" class="radioBtn" value="wrong"><label for="ans2697" id="labelans2697" class="wrong">  1979</label><br><input type="radio" id="ans2698" name="679" class="radioBtn" value="wrong"><label for="ans2698" id="labelans2698" class="wrong">  1996</label><br></div><br><div class="question">26. <font size="4"><span style="font-family: times new roman,times,serif;">The ICAR launched a programme as a part of its Golden Jubilee celebration in 1979 was</span></font><br><input type="radio" id="ans2699" name="680" class="radioBtn" value="correct"><label for="ans2699" id="labelans2699" class="correct">  Lab to Land</label><br><input type="radio" id="ans2700" name="680" class="radioBtn" value="wrong"><label for="ans2700" id="labelans2700" class="wrong">  KVK</label><br><input type="radio" id="ans2701" name="680" class="radioBtn" value="wrong"><label for="ans2701" id="labelans2701" class="wrong">  ORP</label><br><input type="radio" id="ans2702" name="680" class="radioBtn" value="wrong"><label for="ans2702" id="labelans2702" class="wrong">  ATMA</label><br></div><br><div class="question">27. <span><span><span style="font: 7pt " times="" new="" roman";"=""> </span></span></span><font size="4"><span style="font-family: times new roman,times,serif;">The first KVK was established in 1974 at</span></font><br><input type="radio" id="ans2703" name="681" class="radioBtn" value="wrong"><label for="ans2703" id="labelans2703" class="wrong">  Shillong</label><br><input type="radio" id="ans2704" name="681" class="radioBtn" value="wrong"><label for="ans2704" id="labelans2704" class="wrong">  Karnal</label><br><input type="radio" id="ans2705" name="681" class="radioBtn" value="wrong"><label for="ans2705" id="labelans2705" class="wrong">  Nagpur</label><br><input type="radio" id="ans2706" name="681" class="radioBtn" value="correct"><label for="ans2706" id="labelans2706" class="correct">  Pondicherry</label><br></div><br><div class="question">28. <font size="5"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="5"><font size="4">Which programme is also known as <span>‘Single Window’</span></font> <font size="4">approach</font></font></span></font><br><input type="radio" id="ans2707" name="682" class="radioBtn" value="wrong"><label for="ans2707" id="labelans2707" class="wrong">  ORP</label><br><input type="radio" id="ans2708" name="682" class="radioBtn" value="wrong"><label for="ans2708" id="labelans2708" class="wrong">  LLP</label><br><input type="radio" id="ans2709" name="682" class="radioBtn" value="correct"><label for="ans2709" id="labelans2709" class="correct">  ATIC</label><br><input type="radio" id="ans2710" name="682" class="radioBtn" value="wrong"><label for="ans2710" id="labelans2710" class="wrong">  KVK</label><br></div><br><div class="question">29. <span style="font-size: 12pt; line-height: 115%;"><span><span> </span></span></span><!--[endif]--><font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">“Handing over the stick to the insider” in methods and action is known as</font></span></font><br><input type="radio" id="ans2711" name="683" class="radioBtn" value="wrong"><label for="ans2711" id="labelans2711" class="wrong">  Interview</label><br><input type="radio" id="ans2712" name="683" class="radioBtn" value="wrong"><label for="ans2712" id="labelans2712" class="wrong">  RRA</label><br><input type="radio" id="ans2713" name="683" class="radioBtn" value="correct"><label for="ans2713" id="labelans2713" class="correct">  PRA</label><br><input type="radio" id="ans2714" name="683" class="radioBtn" value="wrong"><label for="ans2714" id="labelans2714" class="wrong">  Situation analysis</label><br></div><br><div class="question">30. <font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">Which one is the result of a response to the ‘top-down’ approach to development, the pitfalls of the questionnaire survey method of inquiry?</font></span></font><br><input type="radio" id="ans2715" name="684" class="radioBtn" value="wrong"><label for="ans2715" id="labelans2715" class="wrong">  ATMA</label><br><input type="radio" id="ans2716" name="684" class="radioBtn" value="correct"><label for="ans2716" id="labelans2716" class="correct">  PRA</label><br><input type="radio" id="ans2717" name="684" class="radioBtn" value="wrong"><label for="ans2717" id="labelans2717" class="wrong">  ATIC</label><br><input type="radio" id="ans2718" name="684" class="radioBtn" value="wrong"><label for="ans2718" id="labelans2718" class="wrong">  FFS</label><br></div><br><div class="question">31. <font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">The first FFS was established in the year</font></span></font><br><input type="radio" id="ans2719" name="685" class="radioBtn" value="correct"><label for="ans2719" id="labelans2719" class="correct">  1989</label><br><input type="radio" id="ans2720" name="685" class="radioBtn" value="wrong"><label for="ans2720" id="labelans2720" class="wrong">  1987</label><br><input type="radio" id="ans2721" name="685" class="radioBtn" value="wrong"><label for="ans2721" id="labelans2721" class="wrong">  1990</label><br><input type="radio" id="ans2722" name="685" class="radioBtn" value="wrong"><label for="ans2722" id="labelans2722" class="wrong">  1992</label><br></div><br><div class="question">32. <font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">One of the most important activities i.e. Strategic Research and Extension Plan (SREP) undertaken by</font></span></font><br><input type="radio" id="ans2723" name="686" class="radioBtn" value="wrong"><label for="ans2723" id="labelans2723" class="wrong">  ATIC</label><br><input type="radio" id="ans2724" name="686" class="radioBtn" value="wrong"><label for="ans2724" id="labelans2724" class="wrong">  KVK</label><br><input type="radio" id="ans2725" name="686" class="radioBtn" value="wrong"><label for="ans2725" id="labelans2725" class="wrong">  FFS</label><br><input type="radio" id="ans2726" name="686" class="radioBtn" value="correct"><label for="ans2726" id="labelans2726" class="correct">  ATMA</label><br></div><br><div class="question">33. <font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">The Farmer Field School is a form of </font></span></font><br><input type="radio" id="ans2727" name="687" class="radioBtn" value="correct"><label for="ans2727" id="labelans2727" class="correct">  Adult Education</label><br><input type="radio" id="ans2728" name="687" class="radioBtn" value="wrong"><label for="ans2728" id="labelans2728" class="wrong">  Formal Education</label><br><input type="radio" id="ans2729" name="687" class="radioBtn" value="wrong"><label for="ans2729" id="labelans2729" class="wrong">  In Formal education</label><br><input type="radio" id="ans2730" name="687" class="radioBtn" value="wrong"><label for="ans2730" id="labelans2730" class="wrong">  All the Above</label><br></div><br><div class="question">34. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">Which is the key element of learning process</font></span></font><br><input type="radio" id="ans2731" name="688" class="radioBtn" value="wrong"><label for="ans2731" id="labelans2731" class="wrong">  Teacher</label><br><input type="radio" id="ans2732" name="688" class="radioBtn" value="correct"><label for="ans2732" id="labelans2732" class="correct">  Learner</label><br><input type="radio" id="ans2733" name="688" class="radioBtn" value="wrong"><label for="ans2733" id="labelans2733" class="wrong">  Subject matter</label><br><input type="radio" id="ans2734" name="688" class="radioBtn" value="wrong"><label for="ans2734" id="labelans2734" class="wrong">  Teaching Methods</label><br></div><br><div class="question">35. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""> </span></span></span><!--[endif]--><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Learning is a process of any change in behaviour which takes place as a result of:</span></font><br><input type="radio" id="ans2735" name="689" class="radioBtn" value="correct"><label for="ans2735" id="labelans2735" class="correct">  Experience</label><br><input type="radio" id="ans2736" name="689" class="radioBtn" value="wrong"><label for="ans2736" id="labelans2736" class="wrong">  Motivation</label><br><input type="radio" id="ans2737" name="689" class="radioBtn" value="wrong"><label for="ans2737" id="labelans2737" class="wrong">  Awareness</label><br><input type="radio" id="ans2738" name="689" class="radioBtn" value="wrong"><label for="ans2738" id="labelans2738" class="wrong">  Transformation</label><br></div><br><div class="question">36. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">The essential role of an extension worker is to create effective</font></span></font><br><input type="radio" id="ans2739" name="690" class="radioBtn" value="wrong"><label for="ans2739" id="labelans2739" class="wrong">  Teaching situations</label><br><input type="radio" id="ans2740" name="690" class="radioBtn" value="correct"><label for="ans2740" id="labelans2740" class="correct">  Learning situations</label><br><input type="radio" id="ans2741" name="690" class="radioBtn" value="wrong"><label for="ans2741" id="labelans2741" class="wrong">  Physical facilities</label><br><input type="radio" id="ans2742" name="690" class="radioBtn" value="wrong"><label for="ans2742" id="labelans2742" class="wrong">  Involvement of learner</label><br></div><br><div class="question">37. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%;"><span><span></span></span></span><!--[endif]--><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="4">How much percent of learning we retain after two weeks when we see and hear about new things?</font></span></font><br><input type="radio" id="ans2743" name="691" class="radioBtn" value="correct"><label for="ans2743" id="labelans2743" class="correct">  50 percent</label><br><input type="radio" id="ans2744" name="691" class="radioBtn" value="wrong"><label for="ans2744" id="labelans2744" class="wrong">  20 percent</label><br><input type="radio" id="ans2745" name="691" class="radioBtn" value="wrong"><label for="ans2745" id="labelans2745" class="wrong">  70 percent</label><br><input type="radio" id="ans2746" name="691" class="radioBtn" value="wrong"><label for="ans2746" id="labelans2746" class="wrong">  30 percent</label><br></div><br><div class="question">38. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%;"><span><span></span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;"><font size="5"><font size="4">In the Extension learning, the subject matter should be based on</font></font></span></font><br><input type="radio" id="ans2747" name="692" class="radioBtn" value="wrong"><label for="ans2747" id="labelans2747" class="wrong">  Profitability</label><br><input type="radio" id="ans2748" name="692" class="radioBtn" value="wrong"><label for="ans2748" id="labelans2748" class="wrong">  Need &amp; Interest of Teacher</label><br><input type="radio" id="ans2749" name="692" class="radioBtn" value="correct"><label for="ans2749" id="labelans2749" class="correct">  Need &amp; Interest of Learner</label><br><input type="radio" id="ans2750" name="692" class="radioBtn" value="wrong"><label for="ans2750" id="labelans2750" class="wrong">  New technology</label><br></div><br><div class="question">39. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Which one is the third step in extension teaching</span></font><br><input type="radio" id="ans2751" name="693" class="radioBtn" value="wrong"><label for="ans2751" id="labelans2751" class="wrong">  Attention</label><br><input type="radio" id="ans2752" name="693" class="radioBtn" value="correct"><label for="ans2752" id="labelans2752" class="correct">  Desire</label><br><input type="radio" id="ans2753" name="693" class="radioBtn" value="wrong"><label for="ans2753" id="labelans2753" class="wrong">  Action</label><br><input type="radio" id="ans2754" name="693" class="radioBtn" value="wrong"><label for="ans2754" id="labelans2754" class="wrong">  Interest</label><br></div><br><div class="question">40. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The attention of people being attracted by touch is:</span></font><br><input type="radio" id="ans2755" name="694" class="radioBtn" value="correct"><label for="ans2755" id="labelans2755" class="correct">  1.50  percent</label><br><input type="radio" id="ans2756" name="694" class="radioBtn" value="wrong"><label for="ans2756" id="labelans2756" class="wrong">  3.50  percent</label><br><input type="radio" id="ans2757" name="694" class="radioBtn" value="wrong"><label for="ans2757" id="labelans2757" class="wrong">  1.00  percent</label><br><input type="radio" id="ans2758" name="694" class="radioBtn" value="wrong"><label for="ans2758" id="labelans2758" class="wrong">  7.00  percent</label><br></div><br><div class="question">41. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><!--[endif]--><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The very first step in extension teaching process is</span></font><br><input type="radio" id="ans2759" name="695" class="radioBtn" value="correct"><label for="ans2759" id="labelans2759" class="correct">  Attention</label><br><input type="radio" id="ans2760" name="695" class="radioBtn" value="wrong"><label for="ans2760" id="labelans2760" class="wrong">  Awareness</label><br><input type="radio" id="ans2761" name="695" class="radioBtn" value="wrong"><label for="ans2761" id="labelans2761" class="wrong">  Action</label><br><input type="radio" id="ans2762" name="695" class="radioBtn" value="wrong"><label for="ans2762" id="labelans2762" class="wrong">  Attraction</label><br></div><br><div class="question">42. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The <span>Steps in Extension Teaching was suggested by</span></span></font><br><input type="radio" id="ans2763" name="696" class="radioBtn" value="wrong"><label for="ans2763" id="labelans2763" class="wrong">  Prawl</label><br><input type="radio" id="ans2764" name="696" class="radioBtn" value="wrong"><label for="ans2764" id="labelans2764" class="wrong">  J.P.Leagans</label><br><input type="radio" id="ans2765" name="696" class="radioBtn" value="correct"><label for="ans2765" id="labelans2765" class="correct">  Wilson and Gallup</label><br><input type="radio" id="ans2766" name="696" class="radioBtn" value="wrong"><label for="ans2766" id="labelans2766" class="wrong">  Mathew</label><br></div><br><div class="question">43. <meta content="Word.Document" name="ProgId"><meta content="Microsoft Word 12" name="Generator"><meta content="Microsoft Word 12" name="Originator">
+<div style="text-align: left;"><link href="file:///C:/Users/pc2/AppData/Local/Temp/msohtmlclip1/01/clip_filelist.xml" rel="File-List"><link href="file:///C:/Users/pc2/AppData/Local/Temp/msohtmlclip1/01/clip_themedata.thmx" rel="themeData"><link href="file:///C:/Users/pc2/AppData/Local/Temp/msohtmlclip1/01/clip_colorschememapping.xml" rel="colorSchemeMapping"><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><style> <!-- /* Font Definitions */ @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3 5 4 6 3 2 4; mso-font-charset:0; mso-generic-font-family:roman; mso-font-pitch:variable; mso-font-signature:-536870145 1107305727 0 0 415 0;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4; mso-font-charset:0; mso-generic-font-family:swiss; mso-font-pitch:variable; mso-font-signature:-520092929 1073786111 9 0 415 0;} /* Style Definitions */ p.MsoNormal, li.MsoNormal, div.MsoNormal {mso-style-unhide:no; mso-style-qformat:yes; mso-style-parent:""; margin-top:0in; margin-right:0in; margin-bottom:10.0pt; margin-left:0in; line-height:115%; mso-pagination:widow-orphan; font-size:11.0pt; font-family:"Calibri","sans-serif"; mso-fareast-font-family:Calibri; mso-bidi-font-family:"Times New Roman"; mso-ansi-language:EN-IN;} .MsoChpDefault {mso-style-type:export-only; mso-default-props:yes; font-size:10.0pt; mso-ansi-font-size:10.0pt; mso-bidi-font-size:10.0pt; mso-ascii-font-family:Calibri; mso-fareast-font-family:Calibri; mso-hansi-font-family:Calibri;} @page WordSection1 {size:8.5in 11.0in; margin:1.0in 1.0in 1.0in 1.0in; mso-header-margin:.5in; mso-footer-margin:.5in; mso-paper-source:0;} div.WordSection1 {page:WordSection1;} /* List Definitions */ @list l0 {mso-list-id:237911988; mso-list-type:hybrid; mso-list-template-ids:254426068 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;} @list l0:level1 {mso-level-tab-stop:none; mso-level-number-position:left; text-indent:-.25in;} @list l1 {mso-list-id:1097865651; mso-list-type:hybrid; mso-list-template-ids:-1048659202 586972098 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;} @list l1:level1 {mso-level-number-format:alpha-lower; mso-level-text:"%1\)"; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:.75in; text-indent:-.5in; color:windowtext;} ol {margin-bottom:0in;} ul {margin-bottom:0in;} --> </style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-bidi-font-family:"Times New Roman";}
+</style>
+<![endif]--> <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span></span></span></span><!--[endif]--><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Method demonstration is conducted by</span></font></div><br><input type="radio" id="ans2767" name="697" class="radioBtn" value="wrong"><label for="ans2767" id="labelans2767" class="wrong">  Farmer</label><br><input type="radio" id="ans2768" name="697" class="radioBtn" value="correct"><label for="ans2768" id="labelans2768" class="correct">  Extension worker</label><br><input type="radio" id="ans2769" name="697" class="radioBtn" value="wrong"><label for="ans2769" id="labelans2769" class="wrong">  Scientist</label><br><input type="radio" id="ans2770" name="697" class="radioBtn" value="wrong"><label for="ans2770" id="labelans2770" class="wrong">  None of the above</label><br></div><br><div class="question">44. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""> </span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">In the category of group contacts, most effective extension teaching method is</span></font><br><input type="radio" id="ans2771" name="698" class="radioBtn" value="wrong"><label for="ans2771" id="labelans2771" class="wrong">  Meeting</label><br><input type="radio" id="ans2772" name="698" class="radioBtn" value="correct"><label for="ans2772" id="labelans2772" class="correct">  Result demonstrations</label><br><input type="radio" id="ans2773" name="698" class="radioBtn" value="wrong"><label for="ans2773" id="labelans2773" class="wrong">  Method demonstrations</label><br><input type="radio" id="ans2774" name="698" class="radioBtn" value="wrong"><label for="ans2774" id="labelans2774" class="wrong">  Training course.</label><br></div><br><div class="question">45. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%;"><font size="4"><span style="font-family: times new roman,times,serif;">Audio-visual aids can only</span></font></span><br><input type="radio" id="ans2775" name="699" class="radioBtn" value="wrong"><label for="ans2775" id="labelans2775" class="wrong">  Supplement the learner</label><br><input type="radio" id="ans2776" name="699" class="radioBtn" value="wrong"><label for="ans2776" id="labelans2776" class="wrong">  Cannot supplement the teacher</label><br><input type="radio" id="ans2777" name="699" class="radioBtn" value="correct"><label for="ans2777" id="labelans2777" class="correct">  Can supplement the teacher</label><br><input type="radio" id="ans2778" name="699" class="radioBtn" value="wrong"><label for="ans2778" id="labelans2778" class="wrong">  None of the above</label><br></div><br><div class="question">46. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><!--[endif]--><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Maximum people could be approached through</span></font><br><input type="radio" id="ans2779" name="700" class="radioBtn" value="wrong"><label for="ans2779" id="labelans2779" class="wrong">  Individual contact</label><br><input type="radio" id="ans2780" name="700" class="radioBtn" value="wrong"><label for="ans2780" id="labelans2780" class="wrong">  Group contact</label><br><input type="radio" id="ans2781" name="700" class="radioBtn" value="correct"><label for="ans2781" id="labelans2781" class="correct">  Mass contact</label><br><input type="radio" id="ans2782" name="700" class="radioBtn" value="wrong"><label for="ans2782" id="labelans2782" class="wrong">  Both A &amp; B</label><br></div><br><div class="question">47. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Pamphlet gives full information about a topic in greater length than:</span></font><br><input type="radio" id="ans2783" name="701" class="radioBtn" value="correct"><label for="ans2783" id="labelans2783" class="correct">  Folders &amp; Leaflets</label><br><input type="radio" id="ans2784" name="701" class="radioBtn" value="wrong"><label for="ans2784" id="labelans2784" class="wrong">  Leaflets &amp; Posters</label><br><input type="radio" id="ans2785" name="701" class="radioBtn" value="wrong"><label for="ans2785" id="labelans2785" class="wrong">  Bulletin</label><br><input type="radio" id="ans2786" name="701" class="radioBtn" value="wrong"><label for="ans2786" id="labelans2786" class="wrong">  Booklet</label><br></div><br><div class="question">48. <span lang="EN-IN" style="color: black;"><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><font size="4"><span lang="EN-IN" style="color: black; font-family: times new roman,times,serif;">For making direct/personal contact with the clientele , we need extension staff who are</span></font><br><input type="radio" id="ans2787" name="702" class="radioBtn" value="wrong"><label for="ans2787" id="labelans2787" class="wrong">  Qualified</label><br><input type="radio" id="ans2788" name="702" class="radioBtn" value="correct"><label for="ans2788" id="labelans2788" class="correct">  More in Number</label><br><input type="radio" id="ans2789" name="702" class="radioBtn" value="wrong"><label for="ans2789" id="labelans2789" class="wrong">  Young</label><br><input type="radio" id="ans2790" name="702" class="radioBtn" value="wrong"><label for="ans2790" id="labelans2790" class="wrong">  Experienced</label><br></div><br><div class="question">49. <font size="4"><span lang="EN-IN" style="color: black; font-family: times new roman,times,serif;">Which one is the most appropriate extension method to communicate message among dairy farmers in rural area</span></font><br><input type="radio" id="ans2791" name="703" class="radioBtn" value="wrong"><label for="ans2791" id="labelans2791" class="wrong">  Television</label><br><input type="radio" id="ans2792" name="703" class="radioBtn" value="correct"><label for="ans2792" id="labelans2792" class="correct">  Radio</label><br><input type="radio" id="ans2793" name="703" class="radioBtn" value="wrong"><label for="ans2793" id="labelans2793" class="wrong">  Poster</label><br><input type="radio" id="ans2794" name="703" class="radioBtn" value="wrong"><label for="ans2794" id="labelans2794" class="wrong">  Exhibition</label><br></div><br><div class="question">50. <font size="4"><span lang="EN-IN" style="color: black; font-family: times new roman,times,serif;">Which method will be more useful for a relatively small audience?</span></font><br><input type="radio" id="ans2795" name="704" class="radioBtn" value="correct"><label for="ans2795" id="labelans2795" class="correct">  Method demonstration</label><br><input type="radio" id="ans2796" name="704" class="radioBtn" value="wrong"><label for="ans2796" id="labelans2796" class="wrong">  Dairy Mela</label><br><input type="radio" id="ans2797" name="704" class="radioBtn" value="wrong"><label for="ans2797" id="labelans2797" class="wrong">  Farm and Home Visit</label><br><input type="radio" id="ans2798" name="704" class="radioBtn" value="wrong"><label for="ans2798" id="labelans2798" class="wrong">  Radio</label><br></div><br><div class="question">51. <span style="font-family: " times="" new="" roman","serif";="" color:="" black;"=""><span><span></span></span></span><!--[endif]--><font size="4"><span style="font-family: times new roman,times,serif; color: black;">When new practice is complex or unfamiliar, then which one of the following will be required</span></font><br><input type="radio" id="ans2799" name="705" class="radioBtn" value="wrong"><label for="ans2799" id="labelans2799" class="wrong">  Television</label><br><input type="radio" id="ans2800" name="705" class="radioBtn" value="wrong"><label for="ans2800" id="labelans2800" class="wrong">  Radio</label><br><input type="radio" id="ans2801" name="705" class="radioBtn" value="wrong"><label for="ans2801" id="labelans2801" class="wrong">  Result Demonstration</label><br><input type="radio" id="ans2802" name="705" class="radioBtn" value="correct"><label for="ans2802" id="labelans2802" class="correct">  Face-to-face contacts</label><br></div><br><div class="question">52. <span style="font-family: " times="" new="" roman","serif";="" color:="" black;"=""><span><span></span></span></span><!--[endif]--><font size="4"><span style="font-family: times new roman,times,serif;">In the initial stages of extension, which method is more suitable as well as necessary to gain confidence of farmers</span></font><br><input type="radio" id="ans2803" name="706" class="radioBtn" value="wrong"><label for="ans2803" id="labelans2803" class="wrong">  Method demonstration</label><br><input type="radio" id="ans2804" name="706" class="radioBtn" value="wrong"><label for="ans2804" id="labelans2804" class="wrong">  Dairy Mela</label><br><input type="radio" id="ans2805" name="706" class="radioBtn" value="correct"><label for="ans2805" id="labelans2805" class="correct">  Result demonstrations</label><br><input type="radio" id="ans2806" name="706" class="radioBtn" value="wrong"><label for="ans2806" id="labelans2806" class="wrong">  Radio</label><br></div><br><div class="question">53. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""> </span></span></span><!--[endif]--><span lang="EN-IN" style="font-size: 12pt; line-height: 115%;"><font size="4"><span style="font-family: times new roman,times,serif;">According to a proverb, one picture is worth of ………… words</span></font></span><br><input type="radio" id="ans2807" name="707" class="radioBtn" value="wrong"><label for="ans2807" id="labelans2807" class="wrong">  100</label><br><input type="radio" id="ans2808" name="707" class="radioBtn" value="correct"><label for="ans2808" id="labelans2808" class="correct">  1000</label><br><input type="radio" id="ans2809" name="707" class="radioBtn" value="wrong"><label for="ans2809" id="labelans2809" class="wrong">  10000</label><br><input type="radio" id="ans2810" name="707" class="radioBtn" value="wrong"><label for="ans2810" id="labelans2810" class="wrong">  10</label><br></div><br><div class="question">54. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Audio-visual aids can only</span></font><br><input type="radio" id="ans2811" name="708" class="radioBtn" value="wrong"><label for="ans2811" id="labelans2811" class="wrong">  Supplement the learner</label><br><input type="radio" id="ans2812" name="708" class="radioBtn" value="wrong"><label for="ans2812" id="labelans2812" class="wrong">  Cannot supplement the teacher</label><br><input type="radio" id="ans2813" name="708" class="radioBtn" value="correct"><label for="ans2813" id="labelans2813" class="correct">  Can supplement the teacher</label><br><input type="radio" id="ans2814" name="708" class="radioBtn" value="wrong"><label for="ans2814" id="labelans2814" class="wrong">  None of the above</label><br></div><br><div class="question">55. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""><font size="4"><span style="font-family: times new roman,times,serif;"></span></font></span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">A better colour combination of chalk and board at village level is</span></font><br><input type="radio" id="ans2815" name="709" class="radioBtn" value="wrong"><label for="ans2815" id="labelans2815" class="wrong">  Black &amp; White</label><br><input type="radio" id="ans2816" name="709" class="radioBtn" value="correct"><label for="ans2816" id="labelans2816" class="correct">  Yellow and Green</label><br><input type="radio" id="ans2817" name="709" class="radioBtn" value="wrong"><label for="ans2817" id="labelans2817" class="wrong">  Red and white</label><br><input type="radio" id="ans2818" name="709" class="radioBtn" value="wrong"><label for="ans2818" id="labelans2818" class="wrong">  Blue and yellow</label><br></div><br><div class="question">56. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The majority remember 50 percentage of what they have ---------- at the same time</span></font><br><input type="radio" id="ans2819" name="710" class="radioBtn" value="wrong"><label for="ans2819" id="labelans2819" class="wrong">  Seen</label><br><input type="radio" id="ans2820" name="710" class="radioBtn" value="wrong"><label for="ans2820" id="labelans2820" class="wrong">  Hear</label><br><input type="radio" id="ans2821" name="710" class="radioBtn" value="correct"><label for="ans2821" id="labelans2821" class="correct">  Seen and Hear</label><br><input type="radio" id="ans2822" name="710" class="radioBtn" value="wrong"><label for="ans2822" id="labelans2822" class="wrong">  Seen, Hear and Doing</label><br></div><br><div class="question">57. <font size="4"><span style="font-family: times new roman,times,serif;">The best way to peoples' heart is through their stomach, but the best way to their brain is through their --------------</span></font><br><input type="radio" id="ans2823" name="711" class="radioBtn" value="wrong"><label for="ans2823" id="labelans2823" class="wrong">  Eyes</label><br><input type="radio" id="ans2824" name="711" class="radioBtn" value="wrong"><label for="ans2824" id="labelans2824" class="wrong">  Ears</label><br><input type="radio" id="ans2825" name="711" class="radioBtn" value="wrong"><label for="ans2825" id="labelans2825" class="wrong">  Projected audio aids</label><br><input type="radio" id="ans2826" name="711" class="radioBtn" value="correct"><label for="ans2826" id="labelans2826" class="correct">  Eyes and ears</label><br></div><br><div class="question">58. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span></span></span><font size="4"><span lang="EN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">A group used as a standard for self-appraisal is known as</span></font><br><input type="radio" id="ans2827" name="712" class="radioBtn" value="correct"><label for="ans2827" id="labelans2827" class="correct">  Reference group</label><br><input type="radio" id="ans2828" name="712" class="radioBtn" value="wrong"><label for="ans2828" id="labelans2828" class="wrong">  Primary group</label><br><input type="radio" id="ans2829" name="712" class="radioBtn" value="wrong"><label for="ans2829" id="labelans2829" class="wrong">  Out group</label><br><input type="radio" id="ans2830" name="712" class="radioBtn" value="wrong"><label for="ans2830" id="labelans2830" class="wrong">  Formal Group</label><br></div><br><div class="question">59. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span></span></span><!--[endif]--><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">When </span><span lang="EN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif; letter-spacing: 0.25pt;">people work less because they expect others to take over their tasks, this phenomenon is known as</span></font><br><input type="radio" id="ans2831" name="713" class="radioBtn" value="wrong"><label for="ans2831" id="labelans2831" class="wrong">  Formal group</label><br><input type="radio" id="ans2832" name="713" class="radioBtn" value="wrong"><label for="ans2832" id="labelans2832" class="wrong">  Primary group</label><br><input type="radio" id="ans2833" name="713" class="radioBtn" value="wrong"><label for="ans2833" id="labelans2833" class="wrong">  Informal group</label><br><input type="radio" id="ans2834" name="713" class="radioBtn" value="correct"><label for="ans2834" id="labelans2834" class="correct">  Social loafing</label><br></div><br><div class="question">60. <font size="4"><span style="font-family: times new roman,times,serif;">Which one is not character of primary groups</span></font><br><input type="radio" id="ans2835" name="714" class="radioBtn" value="wrong"><label for="ans2835" id="labelans2835" class="wrong">  Small size</label><br><input type="radio" id="ans2836" name="714" class="radioBtn" value="wrong"><label for="ans2836" id="labelans2836" class="wrong">  We feeling</label><br><input type="radio" id="ans2837" name="714" class="radioBtn" value="correct"><label for="ans2837" id="labelans2837" class="correct">  Aloof relationships</label><br><input type="radio" id="ans2838" name="714" class="radioBtn" value="wrong"><label for="ans2838" id="labelans2838" class="wrong">  Decisions are more traditional</label><br></div><br><div class="question">61. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Which type of </span><span lang="EN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif; letter-spacing: 0.25pt;">stereotypes is applied within members of <i>in group</i></span></font><br><input type="radio" id="ans2839" name="715" class="radioBtn" value="wrong"><label for="ans2839" id="labelans2839" class="wrong">  Negative</label><br><input type="radio" id="ans2840" name="715" class="radioBtn" value="correct"><label for="ans2840" id="labelans2840" class="correct">  Positive</label><br><input type="radio" id="ans2841" name="715" class="radioBtn" value="wrong"><label for="ans2841" id="labelans2841" class="wrong">  Neutral</label><br><input type="radio" id="ans2842" name="715" class="radioBtn" value="wrong"><label for="ans2842" id="labelans2842" class="wrong">  All</label><br></div><br><div class="question">62. <font size="4"><span lang="EN" style="letter-spacing: 0.25pt; font-family: times new roman,times,serif;">The interaction level between the individuals in case of secondary groups is</span></font><br><input type="radio" id="ans2843" name="716" class="radioBtn" value="correct"><label for="ans2843" id="labelans2843" class="correct">  Very less</label><br><input type="radio" id="ans2844" name="716" class="radioBtn" value="wrong"><label for="ans2844" id="labelans2844" class="wrong">  Very much</label><br><input type="radio" id="ans2845" name="716" class="radioBtn" value="wrong"><label for="ans2845" id="labelans2845" class="wrong">  Medium</label><br><input type="radio" id="ans2846" name="716" class="radioBtn" value="wrong"><label for="ans2846" id="labelans2846" class="wrong">  All</label><br></div><br><div class="question">63. <span style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""></span><font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Good leaders are</span></font><br><input type="radio" id="ans2847" name="717" class="radioBtn" value="correct"><label for="ans2847" id="labelans2847" class="correct">  Made not born</label><br><input type="radio" id="ans2848" name="717" class="radioBtn" value="wrong"><label for="ans2848" id="labelans2848" class="wrong">  Born not made</label><br><input type="radio" id="ans2849" name="717" class="radioBtn" value="wrong"><label for="ans2849" id="labelans2849" class="wrong">  Neither born nor born</label><br><input type="radio" id="ans2850" name="717" class="radioBtn" value="wrong"><label for="ans2850" id="labelans2850" class="wrong">  Either born or made</label><br></div><br><div class="question">64. <span style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span></span></span><font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Low task and high relationship is the quality of</span></font><br><input type="radio" id="ans2851" name="718" class="radioBtn" value="wrong"><label for="ans2851" id="labelans2851" class="wrong">  Country Club Leader</label><br><input type="radio" id="ans2852" name="718" class="radioBtn" value="correct"><label for="ans2852" id="labelans2852" class="correct">  Team Leader</label><br><input type="radio" id="ans2853" name="718" class="radioBtn" value="wrong"><label for="ans2853" id="labelans2853" class="wrong">  Impoverished Leader</label><br><input type="radio" id="ans2854" name="718" class="radioBtn" value="wrong"><label for="ans2854" id="labelans2854" class="wrong">  Authoritarian Leader</label><br></div><br><div class="question">65. <span style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""> </span></span></span><!--[endif]--><font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">High task and high relationship is the quality of</span></font><br><input type="radio" id="ans2855" name="719" class="radioBtn" value="correct"><label for="ans2855" id="labelans2855" class="correct">  Impoverished Leader</label><br><input type="radio" id="ans2856" name="719" class="radioBtn" value="wrong"><label for="ans2856" id="labelans2856" class="wrong">  Country Club Leader</label><br><input type="radio" id="ans2857" name="719" class="radioBtn" value="wrong"><label for="ans2857" id="labelans2857" class="wrong">  Team Leader</label><br><input type="radio" id="ans2858" name="719" class="radioBtn" value="wrong"><label for="ans2858" id="labelans2858" class="wrong">  Authoritarian Leader</label><br></div><br><div class="question">66. <span style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""> </span></span></span><font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">A leader who uses a "<span>delegate and disappear</span>" management style is</span></font><br><input type="radio" id="ans2859" name="720" class="radioBtn" value="wrong"><label for="ans2859" id="labelans2859" class="wrong">  Country Club Leader</label><br><input type="radio" id="ans2860" name="720" class="radioBtn" value="wrong"><label for="ans2860" id="labelans2860" class="wrong">  Team Leader</label><br><input type="radio" id="ans2861" name="720" class="radioBtn" value="correct"><label for="ans2861" id="labelans2861" class="correct">  Impoverished Leader</label><br><input type="radio" id="ans2862" name="720" class="radioBtn" value="wrong"><label for="ans2862" id="labelans2862" class="wrong">  Authoritarian Leader</label><br></div><br><div class="question">67. <span style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><!--[endif]--><font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">A great leader is proactive and committed to</span></font><br><input type="radio" id="ans2863" name="721" class="radioBtn" value="correct"><label for="ans2863" id="labelans2863" class="correct">  Excellence</label><br><input type="radio" id="ans2864" name="721" class="radioBtn" value="wrong"><label for="ans2864" id="labelans2864" class="wrong">  Achieve goal</label><br><input type="radio" id="ans2865" name="721" class="radioBtn" value="wrong"><label for="ans2865" id="labelans2865" class="wrong">  Relation</label><br><input type="radio" id="ans2866" name="721" class="radioBtn" value="wrong"><label for="ans2866" id="labelans2866" class="wrong">  None of the above</label><br></div><br><div class="question">68. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span></span></span><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Who has given the ‘eight-steps model of programme planning</span></font><br><input type="radio" id="ans2867" name="722" class="radioBtn" value="correct"><label for="ans2867" id="labelans2867" class="correct">  G.S.Vidyarthi</label><br><input type="radio" id="ans2868" name="722" class="radioBtn" value="wrong"><label for="ans2868" id="labelans2868" class="wrong">  Kelsey and Hearney</label><br><input type="radio" id="ans2869" name="722" class="radioBtn" value="wrong"><label for="ans2869" id="labelans2869" class="wrong">  J.P. Leagans</label><br><input type="radio" id="ans2870" name="722" class="radioBtn" value="wrong"><label for="ans2870" id="labelans2870" class="wrong">  Wilson and Gallup</label><br></div><br><div class="question">69. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><font size="4"><span style="font-family: times new roman,times,serif;">The first step of programme planning process is</span></font></span><br><input type="radio" id="ans2871" name="723" class="radioBtn" value="wrong"><label for="ans2871" id="labelans2871" class="wrong">  Analyse the situation</label><br><input type="radio" id="ans2872" name="723" class="radioBtn" value="correct"><label for="ans2872" id="labelans2872" class="correct">  Collection of facts</label><br><input type="radio" id="ans2873" name="723" class="radioBtn" value="wrong"><label for="ans2873" id="labelans2873" class="wrong">  Develop the objectives</label><br><input type="radio" id="ans2874" name="723" class="radioBtn" value="wrong"><label for="ans2874" id="labelans2874" class="wrong">  Identification of problem</label><br></div><br><div class="question">70. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Basic model (SOTER) of programme planning was given by</span></font><br><input type="radio" id="ans2875" name="724" class="radioBtn" value="wrong"><label for="ans2875" id="labelans2875" class="wrong">  G.S.Vidyarthi</label><br><input type="radio" id="ans2876" name="724" class="radioBtn" value="wrong"><label for="ans2876" id="labelans2876" class="wrong">  Kelsey and Hearney</label><br><input type="radio" id="ans2877" name="724" class="radioBtn" value="correct"><label for="ans2877" id="labelans2877" class="correct">  J.P. Leagans</label><br><input type="radio" id="ans2878" name="724" class="radioBtn" value="wrong"><label for="ans2878" id="labelans2878" class="wrong">  Wilssion and Gallup</label><br></div><br><div class="question">71. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The plan of work is also known as</span></font><br><input type="radio" id="ans2879" name="725" class="radioBtn" value="correct"><label for="ans2879" id="labelans2879" class="correct">  Calendar of activities</label><br><input type="radio" id="ans2880" name="725" class="radioBtn" value="wrong"><label for="ans2880" id="labelans2880" class="wrong">  Time frame</label><br><input type="radio" id="ans2881" name="725" class="radioBtn" value="wrong"><label for="ans2881" id="labelans2881" class="wrong">  Evaluation process</label><br><input type="radio" id="ans2882" name="725" class="radioBtn" value="wrong"><label for="ans2882" id="labelans2882" class="wrong">  All</label><br></div><br><div class="question">72. <font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">Programme planning is not the end product of extension activities but it is an educational tool for</span></font><br><input type="radio" id="ans2883" name="726" class="radioBtn" value="wrong"><label for="ans2883" id="labelans2883" class="wrong">  Helping people to identify their own problems</label><br><input type="radio" id="ans2884" name="726" class="radioBtn" value="wrong"><label for="ans2884" id="labelans2884" class="wrong">  Helping people to make judicious decisions.</label><br><input type="radio" id="ans2885" name="726" class="radioBtn" value="wrong"><label for="ans2885" id="labelans2885" class="wrong">  Helping people to make their own meaningful &amp; sound planning</label><br><input type="radio" id="ans2886" name="726" class="radioBtn" value="correct"><label for="ans2886" id="labelans2886" class="correct">  All  the above</label><br></div><br><div class="question">73. <font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">In which Five-year plan Jawahar Rozgar Yojana was introduced</span></font><br><input type="radio" id="ans2887" name="727" class="radioBtn" value="correct"><label for="ans2887" id="labelans2887" class="correct">  7th Plan</label><br><input type="radio" id="ans2888" name="727" class="radioBtn" value="wrong"><label for="ans2888" id="labelans2888" class="wrong">  8th Plan</label><br><input type="radio" id="ans2889" name="727" class="radioBtn" value="wrong"><label for="ans2889" id="labelans2889" class="wrong">  6th  Plan</label><br><input type="radio" id="ans2890" name="727" class="radioBtn" value="wrong"><label for="ans2890" id="labelans2890" class="wrong">  5th Plan</label><br></div><br><div class="question">74. <font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The eleventh plan has the objective to increase GDP growth to</span></font><br><input type="radio" id="ans2891" name="728" class="radioBtn" value="wrong"><label for="ans2891" id="labelans2891" class="wrong">  9 Percent</label><br><input type="radio" id="ans2892" name="728" class="radioBtn" value="correct"><label for="ans2892" id="labelans2892" class="correct">  10 Percent</label><br><input type="radio" id="ans2893" name="728" class="radioBtn" value="wrong"><label for="ans2893" id="labelans2893" class="wrong">  8 Percent</label><br><input type="radio" id="ans2894" name="728" class="radioBtn" value="wrong"><label for="ans2894" id="labelans2894" class="wrong">  11Percent</label><br></div><br><div class="question">75. <font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The aim of the tenth plan was to make the Indian economy</span></font><br><input type="radio" id="ans2895" name="729" class="radioBtn" value="wrong"><label for="ans2895" id="labelans2895" class="wrong">  The fastest growing economy in the world</label><br><input type="radio" id="ans2896" name="729" class="radioBtn" value="wrong"><label for="ans2896" id="labelans2896" class="wrong">  Growth target of 10 percent</label><br><input type="radio" id="ans2897" name="729" class="radioBtn" value="wrong"><label for="ans2897" id="labelans2897" class="wrong">  To bring in investor friendly market reforms</label><br><input type="radio" id="ans2898" name="729" class="radioBtn" value="correct"><label for="ans2898" id="labelans2898" class="correct">  All the above</label><br></div><br><div class="question">76. <span style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><!--[endif]--><font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">In which five-year plan agriculture was given due importance</span></font><br><input type="radio" id="ans2899" name="730" class="radioBtn" value="wrong"><label for="ans2899" id="labelans2899" class="wrong">  First plan</label><br><input type="radio" id="ans2900" name="730" class="radioBtn" value="wrong"><label for="ans2900" id="labelans2900" class="wrong">  Second Plan</label><br><input type="radio" id="ans2901" name="730" class="radioBtn" value="correct"><label for="ans2901" id="labelans2901" class="correct">  Third Plan</label><br><input type="radio" id="ans2902" name="730" class="radioBtn" value="wrong"><label for="ans2902" id="labelans2902" class="wrong">  Fourth Plan</label><br></div><br><div class="question">77. <font size="4"><span style="font-size: 12pt; line-height: 115%; font-family: times new roman,times,serif;">The duration of <span>4<sup>th</sup> five-year Plan of India was</span></span></font><br><input type="radio" id="ans2903" name="731" class="radioBtn" value="correct"><label for="ans2903" id="labelans2903" class="correct">  1969-74</label><br><input type="radio" id="ans2904" name="731" class="radioBtn" value="wrong"><label for="ans2904" id="labelans2904" class="wrong">  1961-66</label><br><input type="radio" id="ans2905" name="731" class="radioBtn" value="wrong"><label for="ans2905" id="labelans2905" class="wrong">  1966-71</label><br><input type="radio" id="ans2906" name="731" class="radioBtn" value="wrong"><label for="ans2906" id="labelans2906" class="wrong">  1967-1970</label><br></div><br><div class="question">78. <meta content="Word.Document" name="ProgId"><meta content="Microsoft Word 12" name="Generator"><meta content="Microsoft Word 12" name="Originator"><link href="file:///C:/%5CDOCUME~1%5CDRGR~1.PAT%5CLOCALS~1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml" rel="File-List"><link href="file:///C:/%5CDOCUME~1%5CDRGR~1.PAT%5CLOCALS~1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx" rel="themeData"><link href="file:///C:/%5CDOCUME~1%5CDRGR~1.PAT%5CLOCALS~1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml" rel="colorSchemeMapping"><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><style> <!-- /* Font Definitions */ @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3 5 4 6 3 2 4; mso-font-charset:0; mso-generic-font-family:roman; mso-font-pitch:variable; mso-font-signature:-1610611985 1107304683 0 0 159 0;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4; mso-font-charset:0; mso-generic-font-family:swiss; mso-font-pitch:variable; mso-font-signature:-1610611985 1073750139 0 0 159 0;} /* Style Definitions */ p.MsoNormal, li.MsoNormal, div.MsoNormal {mso-style-unhide:no; mso-style-qformat:yes; mso-style-parent:""; margin:0in; margin-bottom:.0001pt; text-align:justify; mso-pagination:widow-orphan; font-size:11.0pt; font-family:"Calibri","sans-serif"; mso-fareast-font-family:Calibri; mso-bidi-font-family:"Times New Roman";} .MsoChpDefault {mso-style-type:export-only; mso-default-props:yes; font-size:10.0pt; mso-ansi-font-size:10.0pt; mso-bidi-font-size:10.0pt; mso-ascii-font-family:Calibri; mso-fareast-font-family:Calibri; mso-hansi-font-family:Calibri;} @page Section1 {size:8.5in 11.0in; margin:1.0in 1.0in 1.0in 1.0in; mso-header-margin:.5in; mso-footer-margin:.5in; mso-paper-source:0;} div.Section1 {page:Section1;} /* List Definitions */ @list l0 {mso-list-id:471600784; mso-list-type:hybrid; mso-list-template-ids:122355138 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;} @list l0:level1 {mso-level-tab-stop:none; mso-level-number-position:left; margin-left:40.3pt; text-indent:-.25in;} ol {margin-bottom:0in;} ul {margin-bottom:0in;} --></style><font size="6"><span style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><font size="7"><span style="font-family: times new roman,times,serif;"><font size="4">Which programme is also known as ‘Single Window’</font> <font size="4">approach:</font> </span></font><o:p></o:p></span></font><!--[endif]--><br><input type="radio" id="ans2907" name="732" class="radioBtn" value="wrong"><label for="ans2907" id="labelans2907" class="wrong">  ORP</label><br><input type="radio" id="ans2908" name="732" class="radioBtn" value="wrong"><label for="ans2908" id="labelans2908" class="wrong">  LLP</label><br><input type="radio" id="ans2909" name="732" class="radioBtn" value="correct"><label for="ans2909" id="labelans2909" class="correct">  ATIC</label><br><input type="radio" id="ans2910" name="732" class="radioBtn" value="wrong"><label for="ans2910" id="labelans2910" class="wrong">  KVK</label><br></div><br><div class="question">79. <meta content="Word.Document" name="ProgId"><meta content="Microsoft Word 12" name="Generator"><meta content="Microsoft Word 12" name="Originator"><link href="file:///C:/DOCUME~1/DRGR~1.PAT/LOCALS~1/Temp/msohtmlclip1/01/clip_filelist.xml" rel="File-List"><link href="file:///C:/DOCUME~1/DRGR~1.PAT/LOCALS~1/Temp/msohtmlclip1/01/clip_themedata.thmx" rel="themeData"><link href="file:///C:/DOCUME~1/DRGR~1.PAT/LOCALS~1/Temp/msohtmlclip1/01/clip_colorschememapping.xml" rel="colorSchemeMapping"><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><style> <!-- /* Font Definitions */ @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3 5 4 6 3 2 4; mso-font-charset:0; mso-generic-font-family:roman; mso-font-pitch:variable; mso-font-signature:-1610611985 1107304683 0 0 159 0;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4; mso-font-charset:0; mso-generic-font-family:swiss; mso-font-pitch:variable; mso-font-signature:-1610611985 1073750139 0 0 159 0;} /* Style Definitions */ p.MsoNormal, li.MsoNormal, div.MsoNormal {mso-style-unhide:no; mso-style-qformat:yes; mso-style-parent:""; margin-top:0in; margin-right:0in; margin-bottom:10.0pt; margin-left:0in; line-height:115%; mso-pagination:widow-orphan; font-size:11.0pt; font-family:"Calibri","sans-serif"; mso-fareast-font-family:Calibri; mso-bidi-font-family:"Times New Roman"; mso-ansi-language:EN-IN;} .MsoChpDefault {mso-style-type:export-only; mso-default-props:yes; font-size:10.0pt; mso-ansi-font-size:10.0pt; mso-bidi-font-size:10.0pt; mso-ascii-font-family:Calibri; mso-fareast-font-family:Calibri; mso-hansi-font-family:Calibri;} @page Section1 {size:8.5in 11.0in; margin:1.0in 1.0in 1.0in 1.0in; mso-header-margin:.5in; mso-footer-margin:.5in; mso-paper-source:0;} div.Section1 {page:Section1;} /* List Definitions */ @list l0 {mso-list-id:1617442641; mso-list-type:hybrid; mso-list-template-ids:2014736642 -1756492922 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;} @list l0:level1 {mso-level-tab-stop:none; mso-level-number-position:left; margin-left:22.3pt; text-indent:-.25in;} ol {margin-bottom:0in;} ul {margin-bottom:0in;} --> </style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";}
+</style>
+<![endif]-->
+<p style="margin: 0in 0in 0.0001pt 22.3pt; text-align: justify; text-indent: -0.25in;" class="MsoNormal"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><font size="4"><span style="font-family: times new roman,times,serif;">Learning is a process of any change in behaviour which takes place as a result of:</span></font><o:p></o:p></span></p><br><input type="radio" id="ans2911" name="733" class="radioBtn" value="correct"><label for="ans2911" id="labelans2911" class="correct">  Experience</label><br><input type="radio" id="ans2912" name="733" class="radioBtn" value="wrong"><label for="ans2912" id="labelans2912" class="wrong">  Motivation</label><br><input type="radio" id="ans2913" name="733" class="radioBtn" value="wrong"><label for="ans2913" id="labelans2913" class="wrong">  Awareness</label><br><input type="radio" id="ans2914" name="733" class="radioBtn" value="wrong"><label for="ans2914" id="labelans2914" class="wrong">  Transformation</label><br></div><br><div class="question">80. <font size="4" style="font-family: times new roman,times,serif;"><span style="font-size: 12pt; line-height: 115%;"><font size="4">Determining what to do and how to do <span> </span>and involve one or more employees in the decision making process is the quality of:</font></span></font><br><input type="radio" id="ans2915" name="734" class="radioBtn" value="wrong"><label for="ans2915" id="labelans2915" class="wrong">  Authoritarian Leader</label><br><input type="radio" id="ans2916" name="734" class="radioBtn" value="correct"><label for="ans2916" id="labelans2916" class="correct">  Democratic Leader</label><br><input type="radio" id="ans2917" name="734" class="radioBtn" value="wrong"><label for="ans2917" id="labelans2917" class="wrong">  Laissez faire</label><br><input type="radio" id="ans2918" name="734" class="radioBtn" value="wrong"><label for="ans2918" id="labelans2918" class="wrong">  All of the above</label><br></div><br><div class="question">81. <span style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%;"><font size="4" style="font-family: times new roman,times,serif;">Determining what to do and how to do <span> </span>and no involvement of employees in the decision making process is the quality of:</font></span><br><input type="radio" id="ans2919" name="735" class="radioBtn" value="correct"><label for="ans2919" id="labelans2919" class="correct">  Authoritarian Leader</label><br><input type="radio" id="ans2920" name="735" class="radioBtn" value="wrong"><label for="ans2920" id="labelans2920" class="wrong">  Democratic Leader</label><br><input type="radio" id="ans2921" name="735" class="radioBtn" value="wrong"><label for="ans2921" id="labelans2921" class="wrong">  Laissez faire</label><br><input type="radio" id="ans2922" name="735" class="radioBtn" value="wrong"><label for="ans2922" id="labelans2922" class="wrong">  All of the above</label><br></div><br><div class="question">82. <span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";"=""><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><!--[endif]--><font size="4"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%; font-family: " times="" new="" roman","serif";="" color:="" black;"=""><font size="4">Need is the difference of two situations:</font></span></font><br><input type="radio" id="ans2923" name="736" class="radioBtn" value="wrong"><label for="ans2923" id="labelans2923" class="wrong">  What is and what ought to be</label><br><input type="radio" id="ans2924" name="736" class="radioBtn" value="wrong"><label for="ans2924" id="labelans2924" class="wrong">  Present and Future</label><br><input type="radio" id="ans2925" name="736" class="radioBtn" value="wrong"><label for="ans2925" id="labelans2925" class="wrong">  Current and Desired</label><br><input type="radio" id="ans2926" name="736" class="radioBtn" value="correct"><label for="ans2926" id="labelans2926" class="correct">  All</label><br></div><br><div class="question">83. <span style="color: black;"><span><span style="font: 7pt " times="" new="" roman";"=""><font size="4" style="font-family: times new roman,times,serif;"> </font></span></span></span><!--[endif]--><font size="4" style="font-family: times new roman,times,serif;"><span style="color: black;">A process of </span><span>designing a course of action to achieve ends is known as:</span></font><br><input type="radio" id="ans2927" name="737" class="radioBtn" value="wrong"><label for="ans2927" id="labelans2927" class="wrong">  Programme</label><br><input type="radio" id="ans2928" name="737" class="radioBtn" value="correct"><label for="ans2928" id="labelans2928" class="correct">  Planning</label><br><input type="radio" id="ans2929" name="737" class="radioBtn" value="wrong"><label for="ans2929" id="labelans2929" class="wrong">  Objectives</label><br><input type="radio" id="ans2930" name="737" class="radioBtn" value="wrong"><label for="ans2930" id="labelans2930" class="wrong">  Goal</label><br></div><br><div class="question">84. <span style="color: black;"><span><span style="font: 7pt " times="" new="" roman";"=""></span></span></span><!--[endif]--><span style="color: black;"><font size="4" style="font-family: times new roman,times,serif;">People seek more information about things in which they are:</font></span><br><input type="radio" id="ans2931" name="738" class="radioBtn" value="wrong"><label for="ans2931" id="labelans2931" class="wrong">  Motivated</label><br><input type="radio" id="ans2932" name="738" class="radioBtn" value="wrong"><label for="ans2932" id="labelans2932" class="wrong">  Planned</label><br><input type="radio" id="ans2933" name="738" class="radioBtn" value="correct"><label for="ans2933" id="labelans2933" class="correct">  Interested</label><br><input type="radio" id="ans2934" name="738" class="radioBtn" value="wrong"><label for="ans2934" id="labelans2934" class="wrong">  Needed</label><br></div><br><div class="question">85. <font size="4" style="font-family: times new roman,times,serif;">Extension programmes should be based on an analysis of the:</font><br><input type="radio" id="ans2935" name="739" class="radioBtn" value="wrong"><label for="ans2935" id="labelans2935" class="wrong">  Past experiences</label><br><input type="radio" id="ans2936" name="739" class="radioBtn" value="wrong"><label for="ans2936" id="labelans2936" class="wrong">  Present situation</label><br><input type="radio" id="ans2937" name="739" class="radioBtn" value="wrong"><label for="ans2937" id="labelans2937" class="wrong">  Future needs</label><br><input type="radio" id="ans2938" name="739" class="radioBtn" value="correct"><label for="ans2938" id="labelans2938" class="correct">  All</label><br></div><br><div class="question">86. <font size="4" style="font-family: times new roman,times,serif;"><span lang="EN-IN" style="font-size: 12pt; line-height: 115%;"><font size="4">The general objective of programme planning is:</font></span></font><br><input type="radio" id="ans2939" name="740" class="radioBtn" value="wrong"><label for="ans2939" id="labelans2939" class="wrong">  To influence people to make changes in their way of life</label><br><input type="radio" id="ans2940" name="740" class="radioBtn" value="wrong"><label for="ans2940" id="labelans2940" class="wrong">  Overall development of rural people</label><br><input type="radio" id="ans2941" name="740" class="radioBtn" value="correct"><label for="ans2941" id="labelans2941" class="correct">  By the people for the people</label><br><input type="radio" id="ans2942" name="740" class="radioBtn" value="wrong"><label for="ans2942" id="labelans2942" class="wrong">  Analysis the present situation</label><br></div><br></div><style>
+  ccc {
+    display: contents;
+  }
+
+  ccc.ccc--converted {
+    animation: ccc 0.7s ease-in-out;
+  }
+
+  @-webkit-keyframes ccc {
+    from {
+      background-color: yellow;
+    }
+
+    to {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+</style><iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" __idm_frm__="1156" src="./DX-221 DAIRY EXTENSION EDUCATION_files/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" style="display: none;" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}"></div></body></html>
