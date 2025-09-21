@@ -1,120 +1,120 @@
 <html>
-  <head>
-    <!-- Google tag (gtag.js) -->
+ <head>
+ <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGGEWM2BER"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
 
-  gtag('config', 'G-TGGEWM2BER');
+ gtag('config', 'G-TGGEWM2BER');
 </script>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-      <title>DE-212 DAIRY ENGINEERING</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+ <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+ <title>DE-212 DAIRY ENGINEERING</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="w3.css">
-    <style>
-     h2
-     {
-      background-color: rgb(33, 150, 243);
-       color: white;
-       border: 2px solid black;
-       margin: 0px 10% 16px 10%;
-       padding: 16px;
-     } 
-    .question
-    {
-       background-color: rgb(135, 206, 235);
-       color: black;
-       border: 2px solid black;
-       margin: 0px 10% 0px 10%;
-       padding: 16px;
-    }  
-    [type=radio]
-    {
-      margin: 8px 0px 8px 0px;
-    }
-    
-    #quiz label
-    {
-      width:80%;
-      padding: 0px 6px 0px 6px;
-    } 
-    </style>
+ <style>
+ h2
+ {
+ background-color: rgb(33, 150, 243);
+ color: white;
+ border: 2px solid black;
+ margin: 0px 10% 16px 10%;
+ padding: 16px;
+ } 
+ .question
+ {
+ background-color: rgb(135, 206, 235);
+ color: black;
+ border: 2px solid black;
+ margin: 0px 10% 0px 10%;
+ padding: 16px;
+ } 
+ [type=radio]
+ {
+ margin: 8px 0px 8px 0px;
+ }
+ 
+ #quiz label
+ {
+ width:80%;
+ padding: 0px 6px 0px 6px;
+ } 
+ </style>
 
 <script>
-     var correctAns = 0;
-     var incorrectAns = 0;
-     var totalAns =0;
-     var previousid=0;
-     var set=0;
-     function quiz() 
-     {
-       radioBtns = document.querySelectorAll(".radioBtn");
-       for (let btn of radioBtns) 
-       {
-         btn.addEventListener('change', function(targetBtn) 
-         {
-           btn = targetBtn.target;
-           let id = "#label" + btn.id;
-           let label = document.querySelector(id);           
-           if (btn.value=="correct") 
-           {
-             if (label.style.borderColor!="green" && label.style.borderColor!="red") 
-             {
-              correctAns+=1; 
-              totalAns+=1;
-             }
-             label.style.borderColor="green";
-             label.style.borderStyle="solid";
-           } 
-           else
-           {
-             if (label.style.borderColor!="green" && label.style.borderColor!="red") 
-             {
-               incorrectAns += 1; 
-               totalAns+=1;
-             }
-             label.style.borderColor="red";
-             label.style.borderStyle="dotted";
-           }
-           percentRight =  correctAns*100/totalAns;
-           document.getElementById("result").innerHTML = "Right/Total<br>" + String(correctAns) + "/" + String(totalAns) +"<br>" +
-                                                           String(percentRight.toFixed(1)) + "%";
-         });
-       }
-     }
-    
-     function markCorrect()
-      {
-        if (set==0)
-        { 
-        labels=document.querySelectorAll(".correct");
-         for (let label of labels)
-         {
-          label.style.borderColor="green";
-          label.style.borderStyle="solid";
-         }
-         document.getElementById("Click").innerHTML="(Unmark Correct)";
-         set=1;
-        } else
-          {
-            labels=document.querySelectorAll(".correct");
-            for (let label of labels)
-            {
-             label.style.borderColor= "transparent";
-             }
-            document.getElementById("Click").innerHTML="(Mark Correct)";
-            set=0;
-           }
-        }
-    </script>
-    </head>
-    <body onload="quiz()">
-  <div id="result" class="w3-display-topright w3-teal">
-  </div><div id="quiz"><h2><a class="w3-Button" href="./index.html"> (Home)</a>DE-212 DAIRY ENGINEERING<span id="Click" onclick="markCorrect()" class="w3-Button"> (Mark Correct) </span></h2><br>
-  </div>
+ var correctAns = 0;
+ var incorrectAns = 0;
+ var totalAns =0;
+ var previousid=0;
+ var set=0;
+ function quiz() 
+ {
+ radioBtns = document.querySelectorAll(".radioBtn");
+ for (let btn of radioBtns) 
+ {
+ btn.addEventListener('change', function(targetBtn) 
+ {
+ btn = targetBtn.target;
+ let id = "#label" + btn.id;
+ let label = document.querySelector(id); 
+ if (btn.value=="correct") 
+ {
+ if (label.style.borderColor!="green" && label.style.borderColor!="red") 
+ {
+ correctAns+=1; 
+ totalAns+=1;
+ }
+ label.style.borderColor="green";
+ label.style.borderStyle="solid";
+ } 
+ else
+ {
+ if (label.style.borderColor!="green" && label.style.borderColor!="red") 
+ {
+ incorrectAns += 1; 
+ totalAns+=1;
+ }
+ label.style.borderColor="red";
+ label.style.borderStyle="dotted";
+ }
+ percentRight = correctAns*100/totalAns;
+ document.getElementById("result").innerHTML = "Right/Total<br>" + String(correctAns) + "/" + String(totalAns) +"<br>" +
+ String(percentRight.toFixed(1)) + "%";
+ });
+ }
+ }
+ 
+ function markCorrect()
+ {
+ if (set==0)
+ { 
+ labels=document.querySelectorAll(".correct");
+ for (let label of labels)
+ {
+ label.style.borderColor="green";
+ label.style.borderStyle="solid";
+ }
+ document.getElementById("Click").innerHTML="(Unmark Correct)";
+ set=1;
+ } else
+ {
+ labels=document.querySelectorAll(".correct");
+ for (let label of labels)
+ {
+ label.style.borderColor= "transparent";
+ }
+ document.getElementById("Click").innerHTML="(Mark Correct)";
+ set=0;
+ }
+ }
+ </script>
+ </head>
+ <body onload="quiz()">
+ <div id="result" class="w3-display-topright w3-teal">
+ </div><div id="quiz"><h2><a class="w3-Button" href="./index.html"> (Home)</a>DE-212 DAIRY ENGINEERING<span id="Click" onclick="markCorrect()" class="w3-Button"> (Mark Correct) </span></h2><br>
+ </div>
 <div class="question">1. Which is the sanitary feature that involves the design of equipment for proper inspection<br>
 <input type="radio" id="ans4071" name="1022" class="radioBtn" value="correct"><label for="ans4071" id="labelans4071" class="correct"> Easily dismantled and reassembled</label><br>
 <input type="radio" id="ans4070" name="1022" class="radioBtn" value="wrong"><label for="ans4070" id="labelans4070" class="wrong"> Gaskets eliminated wherever possible</label><br>
@@ -410,7 +410,7 @@
 <input type="radio" id="ans4261" name="1070" class="radioBtn" value="wrong"><label for="ans4261" id="labelans4261" class="wrong"> towards centre of the discs that are rotating</label><br>
 <input type="radio" id="ans4260" name="1070" class="radioBtn" value="wrong"><label for="ans4260" id="labelans4260" class="wrong"> Towards centre of axis of rotation</label><br>
 </div><br>
-<div class="question">50.  Example of separation of Gas from liquid is
+<div class="question">50. Example of separation of Gas from liquid is
 <br>
 <input type="radio" id="ans4267" name="1071" class="radioBtn" value="correct"><label for="ans4267" id="labelans4267" class="correct"> Vapours from Concentrated milk</label><br>
 <input type="radio" id="ans4266" name="1071" class="radioBtn" value="wrong"><label for="ans4266" id="labelans4266" class="wrong"> Milk Powder from air</label><br>

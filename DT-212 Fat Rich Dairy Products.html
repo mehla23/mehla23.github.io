@@ -1,120 +1,120 @@
 <html>
-  <head>
-    <!-- Google tag (gtag.js) -->
+ <head>
+ <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGGEWM2BER"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
 
-  gtag('config', 'G-TGGEWM2BER');
+ gtag('config', 'G-TGGEWM2BER');
 </script>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-      <title>DT-212 Fat Rich Dairy Products</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+ <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+ <title>DT-212 Fat Rich Dairy Products</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="w3.css">
-    <style>
-     h2
-     {
-      background-color: rgb(33, 150, 243);
-       color: white;
-       border: 2px solid black;
-       margin: 0px 10% 16px 10%;
-       padding: 16px;
-     } 
-    .question
-    {
-       background-color: rgb(135, 206, 235);
-       color: black;
-       border: 2px solid black;
-       margin: 0px 10% 0px 10%;
-       padding: 16px;
-    }  
-    [type=radio]
-    {
-      margin: 8px 0px 8px 0px;
-    }
-    
-    #quiz label
-    {
-      width:80%;
-      padding: 0px 6px 0px 6px;
-    } 
-    </style>
+ <style>
+ h2
+ {
+ background-color: rgb(33, 150, 243);
+ color: white;
+ border: 2px solid black;
+ margin: 0px 10% 16px 10%;
+ padding: 16px;
+ } 
+ .question
+ {
+ background-color: rgb(135, 206, 235);
+ color: black;
+ border: 2px solid black;
+ margin: 0px 10% 0px 10%;
+ padding: 16px;
+ } 
+ [type=radio]
+ {
+ margin: 8px 0px 8px 0px;
+ }
+ 
+ #quiz label
+ {
+ width:80%;
+ padding: 0px 6px 0px 6px;
+ } 
+ </style>
 
 <script>
-     var correctAns = 0;
-     var incorrectAns = 0;
-     var totalAns =0;
-     var previousid=0;
-     var set=0;
-     function quiz() 
-     {
-       radioBtns = document.querySelectorAll(".radioBtn");
-       for (let btn of radioBtns) 
-       {
-         btn.addEventListener('change', function(targetBtn) 
-         {
-           btn = targetBtn.target;
-           let id = "#label" + btn.id;
-           let label = document.querySelector(id);           
-           if (btn.value=="correct") 
-           {
-             if (label.style.borderColor!="green" && label.style.borderColor!="red") 
-             {
-              correctAns+=1; 
-              totalAns+=1;
-             }
-             label.style.borderColor="green";
-             label.style.borderStyle="solid";
-           } 
-           else
-           {
-             if (label.style.borderColor!="green" && label.style.borderColor!="red") 
-             {
-               incorrectAns += 1; 
-               totalAns+=1;
-             }
-             label.style.borderColor="red";
-             label.style.borderStyle="dotted";
-           }
-           percentRight =  correctAns*100/totalAns;
-           document.getElementById("result").innerHTML = "Right/Total<br>" + String(correctAns) + "/" + String(totalAns) +"<br>" +
-                                                           String(percentRight.toFixed(1)) + "%";
-         });
-       }
-     }
-    
-     function markCorrect()
-      {
-        if (set==0)
-        { 
-        labels=document.querySelectorAll(".correct");
-         for (let label of labels)
-         {
-          label.style.borderColor="green";
-          label.style.borderStyle="solid";
-         }
-         document.getElementById("Click").innerHTML="(Unmark Correct)";
-         set=1;
-        } else
-          {
-            labels=document.querySelectorAll(".correct");
-            for (let label of labels)
-            {
-             label.style.borderColor= "transparent";
-             }
-            document.getElementById("Click").innerHTML="(Mark Correct)";
-            set=0;
-           }
-        }
-    </script>
-    </head>
-    <body onload="quiz()">
-  <div id="result" class="w3-display-topright w3-teal">
-  </div><div id="quiz"><h2><a class="w3-Button" href="./index.html"> (Home)</a>DT-212 Fat Rich Dairy Products<span id="Click" onclick="markCorrect()" class="w3-Button"> (Mark Correct) </span></h2><br>
-  </div>
+ var correctAns = 0;
+ var incorrectAns = 0;
+ var totalAns =0;
+ var previousid=0;
+ var set=0;
+ function quiz() 
+ {
+ radioBtns = document.querySelectorAll(".radioBtn");
+ for (let btn of radioBtns) 
+ {
+ btn.addEventListener('change', function(targetBtn) 
+ {
+ btn = targetBtn.target;
+ let id = "#label" + btn.id;
+ let label = document.querySelector(id); 
+ if (btn.value=="correct") 
+ {
+ if (label.style.borderColor!="green" && label.style.borderColor!="red") 
+ {
+ correctAns+=1; 
+ totalAns+=1;
+ }
+ label.style.borderColor="green";
+ label.style.borderStyle="solid";
+ } 
+ else
+ {
+ if (label.style.borderColor!="green" && label.style.borderColor!="red") 
+ {
+ incorrectAns += 1; 
+ totalAns+=1;
+ }
+ label.style.borderColor="red";
+ label.style.borderStyle="dotted";
+ }
+ percentRight = correctAns*100/totalAns;
+ document.getElementById("result").innerHTML = "Right/Total<br>" + String(correctAns) + "/" + String(totalAns) +"<br>" +
+ String(percentRight.toFixed(1)) + "%";
+ });
+ }
+ }
+ 
+ function markCorrect()
+ {
+ if (set==0)
+ { 
+ labels=document.querySelectorAll(".correct");
+ for (let label of labels)
+ {
+ label.style.borderColor="green";
+ label.style.borderStyle="solid";
+ }
+ document.getElementById("Click").innerHTML="(Unmark Correct)";
+ set=1;
+ } else
+ {
+ labels=document.querySelectorAll(".correct");
+ for (let label of labels)
+ {
+ label.style.borderColor= "transparent";
+ }
+ document.getElementById("Click").innerHTML="(Mark Correct)";
+ set=0;
+ }
+ }
+ </script>
+ </head>
+ <body onload="quiz()">
+ <div id="result" class="w3-display-topright w3-teal">
+ </div><div id="quiz"><h2><a class="w3-Button" href="./index.html"> (Home)</a>DT-212 Fat Rich Dairy Products<span id="Click" onclick="markCorrect()" class="w3-Button"> (Mark Correct) </span></h2><br>
+ </div>
 <div class="question">1. As per FSSR 2011, maximum weight of curd in butter is<br>
 <input type="radio" id="ans4927" name="1237" class="radioBtn" value="wrong"><label for="ans4927" id="labelans4927" class="wrong"> 2%</label><br>
 <input type="radio" id="ans4928" name="1237" class="radioBtn" value="correct"><label for="ans4928" id="labelans4928" class="correct"> 1.5%</label><br>
@@ -877,7 +877,7 @@
 <input type="radio" id="ans5433" name="1363" class="radioBtn" value="wrong"><label for="ans5433" id="labelans5433" class="wrong"> 1.5 - 2.0mm</label><br>
 <input type="radio" id="ans5434" name="1363" class="radioBtn" value="correct"><label for="ans5434" id="labelans5434" class="correct"> 0.5 - 1.0mm</label><br>
 </div><br>
-<div class="question">128. Cream separation is the mechanical separation of milk in to cream and  <br>
+<div class="question">128. Cream separation is the mechanical separation of milk in to cream and <br>
 <input type="radio" id="ans5435" name="1364" class="radioBtn" value="correct"><label for="ans5435" id="labelans5435" class="correct"> Skim milk</label><br>
 <input type="radio" id="ans5436" name="1364" class="radioBtn" value="wrong"><label for="ans5436" id="labelans5436" class="wrong"> Water</label><br>
 <input type="radio" id="ans5437" name="1364" class="radioBtn" value="wrong"><label for="ans5437" id="labelans5437" class="wrong"> Whey</label><br>
@@ -907,7 +907,7 @@
 <input type="radio" id="ans5453" name="1368" class="radioBtn" value="correct"><label for="ans5453" id="labelans5453" class="correct"> Clogging due to precipitation of casein particles</label><br>
 <input type="radio" id="ans5454" name="1368" class="radioBtn" value="wrong"><label for="ans5454" id="labelans5454" class="wrong"> Stability of cream</label><br>
 </div><br>
-<div class="question">133. The higher the speed of bowl the higher the  <br>
+<div class="question">133. The higher the speed of bowl the higher the <br>
 <input type="radio" id="ans5455" name="1369" class="radioBtn" value="wrong"><label for="ans5455" id="labelans5455" class="wrong"> SNF% in cream</label><br>
 <input type="radio" id="ans5456" name="1369" class="radioBtn" value="wrong"><label for="ans5456" id="labelans5456" class="wrong"> T.S% in cream</label><br>
 <input type="radio" id="ans5457" name="1369" class="radioBtn" value="correct"><label for="ans5457" id="labelans5457" class="correct"> FAT% in cream</label><br>
@@ -925,7 +925,7 @@
 <input type="radio" id="ans5465" name="1371" class="radioBtn" value="correct"><label for="ans5465" id="labelans5465" class="correct"> Skimming efficiency</label><br>
 <input type="radio" id="ans5466" name="1371" class="radioBtn" value="wrong"><label for="ans5466" id="labelans5466" class="wrong"> Lactose efficiency</label><br>
 </div><br>
-<div class="question">136. The important factor in standardization of cream is  <br>
+<div class="question">136. The important factor in standardization of cream is <br>
 <input type="radio" id="ans5467" name="1372" class="radioBtn" value="correct"><label for="ans5467" id="labelans5467" class="correct"> Fat</label><br>
 <input type="radio" id="ans5468" name="1372" class="radioBtn" value="wrong"><label for="ans5468" id="labelans5468" class="wrong"> SNF</label><br>
 <input type="radio" id="ans5469" name="1372" class="radioBtn" value="wrong"><label for="ans5469" id="labelans5469" class="wrong"> Total solids</label><br>
@@ -1105,7 +1105,7 @@
 <input type="radio" id="ans5585" name="1401" class="radioBtn" value="correct"><label for="ans5585" id="labelans5585" class="correct"> Plastic cream</label><br>
 <input type="radio" id="ans5586" name="1401" class="radioBtn" value="wrong"><label for="ans5586" id="labelans5586" class="wrong"> Coffee cream</label><br>
 </div><br>
-<div class="question">166. For local consumption pasteurized cream is packed in  <br>
+<div class="question">166. For local consumption pasteurized cream is packed in <br>
 <input type="radio" id="ans5587" name="1402" class="radioBtn" value="wrong"><label for="ans5587" id="labelans5587" class="wrong"> polyethylene</label><br>
 <input type="radio" id="ans5588" name="1402" class="radioBtn" value="correct"><label for="ans5588" id="labelans5588" class="correct"> Cartons and bottles</label><br>
 <input type="radio" id="ans5589" name="1402" class="radioBtn" value="wrong"><label for="ans5589" id="labelans5589" class="wrong"> Polystyrene</label><br>
@@ -1129,7 +1129,7 @@
 <input type="radio" id="ans5601" name="1405" class="radioBtn" value="wrong"><label for="ans5601" id="labelans5601" class="wrong"> Antifungal agent</label><br>
 <input type="radio" id="ans5602" name="1405" class="radioBtn" value="wrong"><label for="ans5602" id="labelans5602" class="wrong"> Antibiotic</label><br>
 </div><br>
-<div class="question">170. The high fat content of cream powder renders it susceptible to deterioration which impair the  <br>
+<div class="question">170. The high fat content of cream powder renders it susceptible to deterioration which impair the <br>
 <input type="radio" id="ans5603" name="1406" class="radioBtn" value="wrong"><label for="ans5603" id="labelans5603" class="wrong"> Body</label><br>
 <input type="radio" id="ans5604" name="1406" class="radioBtn" value="correct"><label for="ans5604" id="labelans5604" class="correct"> flavor</label><br>
 <input type="radio" id="ans5605" name="1406" class="radioBtn" value="wrong"><label for="ans5605" id="labelans5605" class="wrong"> color</label><br>

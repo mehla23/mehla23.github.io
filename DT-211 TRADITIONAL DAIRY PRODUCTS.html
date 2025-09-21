@@ -1,120 +1,120 @@
 <html>
-  <head>
-    <!-- Google tag (gtag.js) -->
+ <head>
+ <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGGEWM2BER"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
 
-  gtag('config', 'G-TGGEWM2BER');
+ gtag('config', 'G-TGGEWM2BER');
 </script>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-      <title>DT-211 TRADITIONAL DAIRY PRODUCTS</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+ <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+ <title>DT-211 TRADITIONAL DAIRY PRODUCTS</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="w3.css">
-    <style>
-     h2
-     {
-      background-color: rgb(33, 150, 243);
-       color: white;
-       border: 2px solid black;
-       margin: 0px 10% 16px 10%;
-       padding: 16px;
-     } 
-    .question
-    {
-       background-color: rgb(135, 206, 235);
-       color: black;
-       border: 2px solid black;
-       margin: 0px 10% 0px 10%;
-       padding: 16px;
-    }  
-    [type=radio]
-    {
-      margin: 8px 0px 8px 0px;
-    }
-    
-    #quiz label
-    {
-      width:80%;
-      padding: 0px 6px 0px 6px;
-    } 
-    </style>
+ <style>
+ h2
+ {
+ background-color: rgb(33, 150, 243);
+ color: white;
+ border: 2px solid black;
+ margin: 0px 10% 16px 10%;
+ padding: 16px;
+ } 
+ .question
+ {
+ background-color: rgb(135, 206, 235);
+ color: black;
+ border: 2px solid black;
+ margin: 0px 10% 0px 10%;
+ padding: 16px;
+ } 
+ [type=radio]
+ {
+ margin: 8px 0px 8px 0px;
+ }
+ 
+ #quiz label
+ {
+ width:80%;
+ padding: 0px 6px 0px 6px;
+ } 
+ </style>
 
 <script>
-     var correctAns = 0;
-     var incorrectAns = 0;
-     var totalAns =0;
-     var previousid=0;
-     var set=0;
-     function quiz() 
-     {
-       radioBtns = document.querySelectorAll(".radioBtn");
-       for (let btn of radioBtns) 
-       {
-         btn.addEventListener('change', function(targetBtn) 
-         {
-           btn = targetBtn.target;
-           let id = "#label" + btn.id;
-           let label = document.querySelector(id);           
-           if (btn.value=="correct") 
-           {
-             if (label.style.borderColor!="green" && label.style.borderColor!="red") 
-             {
-              correctAns+=1; 
-              totalAns+=1;
-             }
-             label.style.borderColor="green";
-             label.style.borderStyle="solid";
-           } 
-           else
-           {
-             if (label.style.borderColor!="green" && label.style.borderColor!="red") 
-             {
-               incorrectAns += 1; 
-               totalAns+=1;
-             }
-             label.style.borderColor="red";
-             label.style.borderStyle="dotted";
-           }
-           percentRight =  correctAns*100/totalAns;
-           document.getElementById("result").innerHTML = "Right/Total<br>" + String(correctAns) + "/" + String(totalAns) +"<br>" +
-                                                           String(percentRight.toFixed(1)) + "%";
-         });
-       }
-     }
-    
-     function markCorrect()
-      {
-        if (set==0)
-        { 
-        labels=document.querySelectorAll(".correct");
-         for (let label of labels)
-         {
-          label.style.borderColor="green";
-          label.style.borderStyle="solid";
-         }
-         document.getElementById("Click").innerHTML="(Unmark Correct)";
-         set=1;
-        } else
-          {
-            labels=document.querySelectorAll(".correct");
-            for (let label of labels)
-            {
-             label.style.borderColor= "transparent";
-             }
-            document.getElementById("Click").innerHTML="(Mark Correct)";
-            set=0;
-           }
-        }
-    </script>
-    </head>
-    <body onload="quiz()">
-  <div id="result" class="w3-display-topright w3-teal">
-  </div><div id="quiz"><h2><a class="w3-Button" href="./index.html"> (Home)</a>DT-211 TRADITIONAL DAIRY PRODUCTS<span id="Click" onclick="markCorrect()" class="w3-Button"> (Mark Correct) </span></h2><br>
-  </div>
+ var correctAns = 0;
+ var incorrectAns = 0;
+ var totalAns =0;
+ var previousid=0;
+ var set=0;
+ function quiz() 
+ {
+ radioBtns = document.querySelectorAll(".radioBtn");
+ for (let btn of radioBtns) 
+ {
+ btn.addEventListener('change', function(targetBtn) 
+ {
+ btn = targetBtn.target;
+ let id = "#label" + btn.id;
+ let label = document.querySelector(id); 
+ if (btn.value=="correct") 
+ {
+ if (label.style.borderColor!="green" && label.style.borderColor!="red") 
+ {
+ correctAns+=1; 
+ totalAns+=1;
+ }
+ label.style.borderColor="green";
+ label.style.borderStyle="solid";
+ } 
+ else
+ {
+ if (label.style.borderColor!="green" && label.style.borderColor!="red") 
+ {
+ incorrectAns += 1; 
+ totalAns+=1;
+ }
+ label.style.borderColor="red";
+ label.style.borderStyle="dotted";
+ }
+ percentRight = correctAns*100/totalAns;
+ document.getElementById("result").innerHTML = "Right/Total<br>" + String(correctAns) + "/" + String(totalAns) +"<br>" +
+  String(percentRight.toFixed(1)) + "%";
+ });
+ }
+ }
+ 
+ function markCorrect()
+ {
+ if (set==0)
+ { 
+ labels=document.querySelectorAll(".correct");
+ for (let label of labels)
+ {
+ label.style.borderColor="green";
+ label.style.borderStyle="solid";
+ }
+ document.getElementById("Click").innerHTML="(Unmark Correct)";
+ set=1;
+ } else
+ {
+ labels=document.querySelectorAll(".correct");
+ for (let label of labels)
+ {
+ label.style.borderColor= "transparent";
+ }
+ document.getElementById("Click").innerHTML="(Mark Correct)";
+ set=0;
+ }
+ }
+ </script>
+ </head>
+ <body onload="quiz()">
+ <div id="result" class="w3-display-topright w3-teal">
+ </div><div id="quiz"><h2><a class="w3-Button" href="./index.html"> (Home)</a>DT-211 TRADITIONAL DAIRY PRODUCTS<span id="Click" onclick="markCorrect()" class="w3-Button"> (Mark Correct) </span></h2><br>
+ </div>
 <div class="question">1. The % of milk utilized as liquid milk from the total production is <br>
 <input type="radio" id="ans3803" name="955" class="radioBtn" value="wrong"><label for="ans3803" id="labelans3803" class="wrong"> None of these</label><br>
 <input type="radio" id="ans3802" name="955" class="radioBtn" value="wrong"><label for="ans3802" id="labelans3802" class="wrong"> 34%</label><br>
@@ -1043,10 +1043,10 @@
 <input type="radio" id="ans4415" name="1108" class="radioBtn" value="wrong"><label for="ans4415" id="labelans4415" class="wrong"> Sweetened khoa powder</label><br>
 </div><br>
 <div class="question">155. Optimum acidity of <i>Misti dahi</i> ranges between<br>
-<input type="radio" id="ans4416" name="1109" class="radioBtn" value="wrong"><label for="ans4416" id="labelans4416" class="wrong">  0.5-0.7% LA</label><br>
-<input type="radio" id="ans4417" name="1109" class="radioBtn" value="correct"><label for="ans4417" id="labelans4417" class="correct">  0.7-0.9% LA</label><br>
+<input type="radio" id="ans4416" name="1109" class="radioBtn" value="wrong"><label for="ans4416" id="labelans4416" class="wrong"> 0.5-0.7% LA</label><br>
+<input type="radio" id="ans4417" name="1109" class="radioBtn" value="correct"><label for="ans4417" id="labelans4417" class="correct"> 0.7-0.9% LA</label><br>
 <input type="radio" id="ans4418" name="1109" class="radioBtn" value="wrong"><label for="ans4418" id="labelans4418" class="wrong"> 1.0-1.2% LA</label><br>
-<input type="radio" id="ans4419" name="1109" class="radioBtn" value="wrong"><label for="ans4419" id="labelans4419" class="wrong">  1.2-1.4% LA</label><br>
+<input type="radio" id="ans4419" name="1109" class="radioBtn" value="wrong"><label for="ans4419" id="labelans4419" class="wrong"> 1.2-1.4% LA</label><br>
 </div><br>
 <div class="question">156. The yield of <i>khoa</i> depends on the following factors <o:p></o:p><br>
 <input type="radio" id="ans4420" name="1110" class="radioBtn" value="wrong"><label for="ans4420" id="labelans4420" class="wrong"> Type of milk</label><br>
@@ -1055,12 +1055,12 @@
 <input type="radio" id="ans4423" name="1110" class="radioBtn" value="correct"><label for="ans4423" id="labelans4423" class="correct"> All of these</label><br>
 </div><br>
 <div class="question">157. Rancidity in <i>khoa</i> develops due to <br>
-<input type="radio" id="ans4424" name="1111" class="radioBtn" value="correct"><label for="ans4424" id="labelans4424" class="correct">   Fat hydrolysis by lipase</label><br>
+<input type="radio" id="ans4424" name="1111" class="radioBtn" value="correct"><label for="ans4424" id="labelans4424" class="correct"> Fat hydrolysis by lipase</label><br>
 <input type="radio" id="ans4425" name="1111" class="radioBtn" value="wrong"><label for="ans4425" id="labelans4425" class="wrong"> Over heating</label><br>
 <input type="radio" id="ans4426" name="1111" class="radioBtn" value="wrong"><label for="ans4426" id="labelans4426" class="wrong"> Protein breakdown</label><br>
 <input type="radio" id="ans4427" name="1111" class="radioBtn" value="wrong"><label for="ans4427" id="labelans4427" class="wrong"> None of these</label><br>
 </div><br>
-<div class="question">158.  The oily and greasy appearance of buffalo milk <i>khoa</i> is due to <br>
+<div class="question">158. The oily and greasy appearance of buffalo milk <i>khoa</i> is due to <br>
 <input type="radio" id="ans4428" name="1112" class="radioBtn" value="correct"><label for="ans4428" id="labelans4428" class="correct"> Higher free content</label><br>
 <input type="radio" id="ans4429" name="1112" class="radioBtn" value="wrong"><label for="ans4429" id="labelans4429" class="wrong"> Lower free content</label><br>
 <input type="radio" id="ans4430" name="1112" class="radioBtn" value="wrong"><label for="ans4430" id="labelans4430" class="wrong"> Manner of handling the product</label><br>
